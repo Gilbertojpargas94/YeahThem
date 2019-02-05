@@ -1,0 +1,41 @@
+<%= render 'partials/navbar' %>
+<div class="container-fluid">
+ <% if !notice.nil? %>
+      <p id="notice" class="alert alert-success"><%= notice %></p>  
+    <%elsif !alert.nil? %>
+      <p id="notice" class="alert alert-danger" style="color: red"><%= alert %></p>  
+  <%end%>
+  <div class="row">
+    <main class=" col-md-12 col-sm-height padding-main-log">
+      <h6 class="text-center acced-text">Accede</h6>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-md-3 col-sm-2"></div>
+          <div class="col-lg-4 col-md-6 col-sm-8 container-log bg-white">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="form-inputs text-center" style="font-weight: bold;">
+                <div style="border-bottom: 2px solid #c0c0c0">
+                  <%= f.email_field :email , required: true, autofocus: true, label: "Correo", class: "w-100 imputs-log", style:"margin-top: 20px;", placeholder: "E-mail"%>
+                </div>
+                <div style="border-bottom: 2px solid #c0c0c0">
+                  <%= f.password_field :password, required: true, label: "Contraseña", class: "w-100 imputs-log", style:"margin-top: 15px;", placeholder: "Contraseña" %>
+                </div>
+              </div>
+              <div class="links-log text-primary" style="color:blue;">
+                 <%= render "devise/shared/links" %>
+              </div>
+              
+              <div class="form-actions">
+                <%= f.submit "INICIAR SESIÓN", class: "login login-submit w-100" %>
+              </div>
+              <div class="text-center container-regist-in-log">
+                <p id="p-line" class="message">¿Nuevo en Partner Good?<%= link_to "Registrate", new_user_registration_path, class:"text-primary link-regist"%></p>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-2"></div>
+        </div>
+      </div> 
+    </main>
+  </div>
+</div>

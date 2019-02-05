@@ -1,0 +1,17 @@
+<%= form_tag benefits_path do %>
+  <% results.each do |benefit| %>
+    <%= fields_for 'benefits[]', benefit do |p| %>
+      <div class="field">
+        <%= p.hidden_field :solution_id, :value => params[:solution_id] %>
+      </div>
+
+      <div class="field">
+        <%= p.label :description %>
+        <%= p.text_area :description, id: "texts-areas", class: "benefits-area",maxlength:72, require: true %>
+      </div>
+    <% end %>
+  <%end%>
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>

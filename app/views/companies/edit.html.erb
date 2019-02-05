@@ -1,0 +1,277 @@
+<div class="bar-exit-editor">
+     <%= link_to your_solutions_company_path(1), class:'exit-link' do %>
+        <p> <i class="fa fa-arrow-left"></i> Exit Editor</p>
+    <%end%>
+</div>
+<header class="header-editor-profile">
+    <div class="container-edit-profile">
+        <ul>
+            <%= link_to edit_company_path(1) do %>
+                <li>About</li>
+            <%end%>
+            <%= link_to preview_new_solution_path(1) do %>
+                <li>Solutions</li>
+            <%end%>
+            <%= link_to happyclients_solution_path(1) do %>
+                <li>Happy Clients</li>
+            <%end%>
+            <%= link_to thanks_message_company_path(1) do %>
+                <li>Thanks</li>
+            <%end%>
+        </ul>
+    </div>
+    <div class="container-launch-page">
+        <button class="btn btn-default hvr-glow" style="cursor: none; pointer-events: none; padding: 15px 15px;">LANZA TU PÁGINA</button>
+    </div>
+
+    <div class="container-page-title">
+        <h2>About</h2>
+        <p>Crea una gran primera impresión</p>
+    </div>
+</header>
+
+<div class="container-body-form container">
+
+    <div class="row">
+        
+        <div class="col-lg-8 col-sm-12 col-form-cont">
+            
+            <div class="container-window">
+                <div class="input-group group-formconfi">
+                    <div class="labeltext">
+                        <label for="">Nombre Comercial</label>
+                        <p>Requerido</p>
+                    </div>
+                    
+                    <div class="container-input">
+                        <input type="text" name="nombre" class="form-control input" placeholder="">
+                    </div>
+                </div>
+
+                <div class="input-group group-formconfi">
+                    <div class="labeltext">
+                        <label for="">Especialización</label>
+                        <p>Requerido</p>
+                    </div>
+                
+                    <div class="container-input">
+                        <input type="text" name="especializacion" class="form-control input" placeholder="">
+                    </div>
+                </div>
+
+         
+            </div>
+
+
+        <div class="container-window">
+            <div class="container-editor-logo">
+                <div class="labeltext">
+                    <label>
+                        Logo
+                    </label>
+                    <p>Requerido</p>
+                    <p>Tu Logo que aparecerá en busquedas y en tus soluciones.</p>
+                </div>
+
+                <div class="container-upload">
+
+                    <div class="circle-upload">
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-editor-logo">
+                <div class="labeltext modulo-2">
+                    <label>
+                        Imagen de Portada
+                    </label>
+                    <p>Requerido</p>
+                    <p>La imagen que servirá de presentación de tu empresa.</p>
+                </div>
+            
+                <div class="container-upload">
+            
+                    <div class="header-upload">
+            
+                    </div>
+            
+                </div>
+            </div>
+
+            <div class="container-editor-img-header"></div>
+        </div>
+
+
+        <div class="container-window">
+                <div class="input-group group-formconfi">
+                    <div class="labeltext">
+                        <label for="">Sobre XXX</label>
+                        <p>Un frase para que exploques en qué ayudáis a vuestros clientes</p>
+                    </div>
+                
+                    <div class="container-input">
+                        <input type="text" name="frase" class="form-control input" placeholder="">
+                        <p>X palabras / 150 caracteres</p>
+                    </div>
+                </div>
+
+                <div class="input-group group-formconfi">
+                    <div class="labeltext">
+                        <label for="">¿Cuál te gusta más?</label>
+                       
+                    </div>
+                
+                    <div class="container-radio">
+                        <form>
+                        <label class="container-r-item">Counsel on Call <span>helps clients</span> resolvemos problemas jurídicos de ámbito civil
+                            <input type="radio" name="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+             
+                        <label class="container-r-item">
+                            <input type="radio" name="radio">
+                            <div class="input-special">
+                            <p>Counsel on Call <span>helps clients</span> </p> 
+                             <div class="i-call">
+                             <input type="text" class="form-control" placeholder="">
+                                <p>X palabras / 150 caracteres</p>
+                            
+                                </div>
+                           </div>
+                            
+                            <span class="checkmark"></span>
+                                   <p>Resolvemos problemas jurídicos de ámbito civil.</p>
+                        </label>
+
+                                
+                        </form>
+
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="container-window modulolinks5">
+                <div class="titlesociallinks">
+                    <h4>
+                        Links
+                    </h4>
+                    <p>Links a tus Redes Sociales</p>
+                </div>
+
+                <div class="social-links-container">
+                    <div class="fbUrl">
+            <div class="input-group grouplink">
+                <div class="labelsocial">
+                    <i class="fa fa-facebook"></i>
+                </div>
+            
+                <div class="container-input">
+                    <input type="text" class="form-control inputlinks" placeholder="FaceBook">
+                </div>
+            </div>
+                    </div>
+                    
+                    <div class="ytUrl">
+
+            <div class="input-group grouplink">
+                <div class="labelsocial">
+                    <i class="fa fa-youtube"></i>
+                </div>
+            
+                <div class="container-input">
+                    <input type="text" class="form-control inputlinks" placeholder="YouTube">
+                </div>
+
+            </div>
+                    </div>
+                    
+                    <div class="linkedinUrl">
+
+                        <div class="input-group grouplink">
+                            <div class="labelsocial">
+                                <i class="fa fa-linkedin"></i>
+                            </div>
+                        
+                            <div class="container-input">
+                                <input type="text" class="form-control inputlinks" placeholder="LinkedIn">
+                            </div>
+                        
+                        </div>
+
+                    </div>
+                    
+                    <div class="twitterUrl">
+
+                        <div class="input-group grouplink">
+                            <div class="labelsocial">
+                                <i class="fa fa-twitter-square"></i>
+                            </div>
+                        
+                            <div class="container-input">
+                                <input type="text" class="form-control inputlinks" placeholder="Twitter">
+                            </div>
+                        
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+
+        </div>
+
+
+        <div class="container-window moduleyeahurl"> 
+
+        <div class="container-yeah-url">
+            <div class="titleurl">
+                <h3> Yeahthem URL</h3>
+            </div>
+
+            <div class="url-com">
+                <p>yeahthem   <span>.com/</span><input type="text" name="" class="form-control " placeholder=""></p> 
+            </div>
+
+            </div>
+        </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-sm-12 col-form-progress">
+            <button class="btn registerSave hvr-glow">guardar cambios</button>
+            <div class="container-window processpart">
+                <div class="left-space">
+                    <div class="circle-p"></div>
+                </div>
+                <div class="process-list">
+                    <p>Tu checklist antes de lanzar:</p>
+
+                    <ul>
+                        <li class="true" ><i class="fa fa-check"></i> Nombre comercial</li>
+                        <li class="true" ><i class="fa fa-check"></i>Especialización</li>
+                        <li class="true" ><i class="fa fa-check"></i>Imagen de portada</li>
+                        <li class="false" ><i class="fa fa-times"></i>Tus soluciones</li>
+                        <li class="false" ><i class="fa fa-times"></i>Tus resultados</li>
+                    </ul>
+                </div>
+            </div>
+
+
+             <div class="container-window details-windows">
+                <div class="window-header">
+                    <h3>DETALLES</h3>
+                </div>
+
+                <div class="content-details">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit earum molestias blanditiis accusantium quasi reiciendis quam exercitationem qui dignissimos!
+                </div>
+             </div>
+
+        </div>
+       
+    </div>
+</div> 

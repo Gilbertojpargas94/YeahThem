@@ -1,0 +1,296 @@
+<div class="sub-header-solution">
+  <h5 class="add-solution-msj"> <%= @user.first_name %>, añade una solución siguiendo estos 3 simples pasos:</h5>
+  <div class="row" style="background-color: #C4E5D3;">
+      <div class="card col-4" id="cards-groups-solutions-1">
+        <div class="card-body">
+          <h6 class="card-title title-info-solution">1.Añade una Solución</h6>
+          <p class="card-text cards-text-solution"> Explica como ayudaste a tus clientes</p>
+        </div>
+        <div><p class="card-btn-solutions" onclick="scrollToPlus('sol-title')" >Añadir Solución</p></div>
+      </div>
+      <div class="card col-4" id="cards-groups-solutions-2">
+        <div class="card-body">
+          <h6 class="card-title title-info-solution">2.Explica tus resultados</h6>
+          <p class="card-text cards-text-solution">Explica como tu producto o servicio ha sido de ayudado a tus clientes</p>
+        </div>
+        <div><p class="card-btn-solutions" onclick="scrollToPlus('bene-mod-link')">Explicar Resultados</p></div>
+      </div>
+      <div class="card col-4" id="cards-groups-solutions-3">
+        <div class="card-body">
+          <h6 class="card-title title-info-solution">3.Deja que tus clientes lo sepan</h6>
+          <p class="card-text cards-text-solution">Esto con la finalidad que tus clientes puedan validar tu proyecto. Recuerda que la validación de terceros es lo que los compradores necesitan para tomar una decisión sobre productos o servicios</p>
+        </div>
+        <div><p class="card-btn-solutions" onclick="scrollToPlus('share-link')">Validar</p></div>
+      </div>
+  </div>
+</div>
+<div id="intructions-solutions" style="margin-right: 5%; margin-left: 5%">
+  <div class="row">
+    <div class="col-4">
+      <div class="box-intruccions text-center" style="padding-bottom: 4px; padding-top: 4px">
+        <p style="font-size: 1.3em; margin-bottom: 0px;">1.Añade tu Solución</p>
+      </div>
+      <p  class="text-intruccions text-secondary"> Explica como ayudaste a tus clientes</p>
+    </div>
+    <div class="col-4">
+      <div  class="box-intruccions text-center" style="padding-bottom: 4px; padding-top: 4px">
+       <p style="font-size: 1.3em;margin-bottom: 0px;">2.Explica tus resultados</p>
+      </div>
+      <p class="text-intruccions text-secondary">Explica como tu producto o servicio ha sido de ayudado a tus clientes</p>
+    </div>
+    <div class="col-4">
+      <div  class="box-intruccions text-center" style="padding-bottom: 13px; padding-top: 13px">
+        <p style="font-size: 1.3em;margin-bottom: 0px;">3. Validar</p>
+      </div>
+      <p class="text-intruccions text-secondary">Esto va ser usado para que tus clienets puedan valdiar tu proyecto</p>
+    </div>
+  </div>
+</div>
+<main class="main-company_solution" style="margin-top: -1%">
+  <p class="text-secondary">Sólo tu puedes ver este menu</p>
+   <div class="row" style="margin-bottom: 2%">
+    <div class="col-6 col-sm-5 col-md-4 col-xl-3" id="folders" style="color: #B4BABA">
+      <div class="row">
+        <div class="col-1"><i class="material-icons">settings</i></div>
+        <div class="col-9"> 
+          <%= link_to  "Mis soluciones", your_solutions_company_path(current_user.company), class:"text-secondary my-solutionss", style:"text-decoration: none;" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-6  col-sm-4 col-xl-3" style="margin-left: -12%;color: #11625B">
+      <div class="row">
+        <div class="col-1"><i class="material-icons" style="border-left: 2px solid #11625B">assignment</i></div>
+        <div class="col-9 solutionss"> Solución <%= (@solutions.size + 1) %> </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <aside class="col-sm-5 col-lg-4 col-xl-3" style="margin-bottom: 25px;">
+      <div class="card shadow-style">
+        <div class="row">
+        <h3 id="sol-title" class="title-card-solution col-8">
+          Solución
+          <%= link_to new_solution_path, remote: true, style:"margin-left: 0.8em;" do %>
+            <span style="font-size: 1.5em;"><i class="fa fa-plus"></i></span>
+          <% end %>            
+        </h3>
+        <h3 class="title-card-solution-id col-3">
+          <%= (@solutions.size) + 1 %>            
+        </h3>
+        </div>
+        <section class="card_title">
+          <div class="row">
+            <div class="col-4">
+             <%= image_tag @company.logo.url(:thumb), class: "card-image-title" %> 
+            </div>
+            <div class="cad-sub-title col" style="margin-left: -25px;">
+              <h5><%= @company.name %></h5>
+              <h6>
+                <%= @company.industries.first.name %> - <span id="sol-branch"></span>
+              </h6>
+            </div>
+          </div>
+        </section>
+        <%= image_tag "camera.png", class: "img-card", id:"sol-img" %>
+          <div class="card-body">
+            <p class="card-text line-space" id="sol-desc">
+              Descripción
+            </p>
+            <div class="container-fluid">
+              <div class="row" style="margin-top: 10px;">
+                <div id="validation-solution">
+                  <i class="material-icons ii  md-18">beenhere</i>
+                </div>
+                <div id="validation-solution-num">
+                  <p class="validado-p" style="margin-left: 5px;"><%= @solution.num_validation.nil? ? @solution.num_validation : 0 %> Validaciones</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </aside>
+    <section class="col-sm-7 col-lg-8  col-xl-9 information-solution">
+      <div class="row">
+        <article class="w-100 clients-solutions">
+          <div class="row">
+              <p class="col-2 col-sm-2 col-lg-1" data-toggle="tooltip" title="Añade a un Cliente" id="share-link" style="display: inline-block;">
+                <%= link_to share_solution_path(current_user.company.id), id:"share-href",remote: true do %>
+                  <span style="font-size: 1.5em;"><i class="fa fa-plus"></i></span>
+                <%end%>
+              </p>
+            <div class="col-4 col-sm-4 col-lg-4" style="margin-left: -30px;">
+              <p class="subtitulo-company_solution" style="font-family: Segoe UI; font-size: 1rem;">Clientes</p>
+            </div>
+            <div class="col">                  
+            </div>
+          </div>
+          <div class="col bottom-space" style="margin-top: -15px;">
+            <p class="text-secondary text-center" style="font-style: italic;">Este es un ejemplo</p>
+          </div>
+          <div class="row" style="margin-top: -15px;">
+            <div class="col-sm-9 col-lg-6 col-xl-4" style="padding-right: 3%;" >
+              <div class="clints-company row" >
+                <div class="col-3" style="padding-right: 0px;">
+                <%= image_tag "head_2.png", class: "img-clientes-solutions" %>
+                </div>
+                <div class="container-clients-solution col" style="padding-right: 0px;
+        padding-left: 10px;">
+                  <p class="p-solution_company" style="font-weight: bold; color: black;" >José Mendez</p>
+                  <p class="p-solution_company" style="color: black;">SONY</p>
+                  <p class="p-solution_company" style="font-weight: bold; color: black;">Consultor SAP (BI)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-9 col-lg-6 col-xl-4" style="padding-right: 3%;">
+              <div class="clints-company row">
+                <div class="col-3" style="padding-right: 0px;">
+                  <%= image_tag "head_3.png", class: "img-clientes-solutions" %>
+                </div>
+                <div class="container-clients-solution col" style="padding-right: 0px;
+        padding-left: 10px;">
+                  <p class="p-solution_company" style="font-weight: bold; color: black;" >Raul Vasquez</p>
+                  <p class="p-solution_company" style="color: black;">ADIDAS</p>
+                  <p class="p-solution_company" style="font-weight: bold; color: black;">Consultor SAP (BI)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-9 col-lg-6 col-xl-4" style="padding-right: 3%;">
+              <div class="clints-company row">
+                <div class="col-3" style="padding-right: 0px;">
+                  <%= image_tag "head_3.png", class: "img-clientes-solutions" %>
+                </div>
+                <div class="container-clients-solution col" style="padding-right: 0px;
+        padding-left: 10px;">
+                  <p class="p-solution_company" style="font-weight: bold; color: black;" >Raul Vasquez</p>
+                  <p class="p-solution_company" style="color: black;">ADIDAS</p>
+                  <p class="p-solution_company" style="font-weight: bold; color: black;">Consultor SAP (BI)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="row benefits-solutions">
+        <article class="w-100 clients-solutions">
+          <div class="row benefit-table" style="margin-bottom: 20px;">
+            <table class="table table-striped benefit-table-font" id="bene-desc">
+                <thead>
+                  <tr>
+                    <th scope="col" id="bene-mod-link" style="width: 3%">
+                      <%= link_to new_benefit_path, id:"bene-href", remote:true do %> 
+                        <span style="font-size: 1.5em;" data-toggle="tooltip" title="Añade un beneficio"><i class="fa fa-plus"></i></span>
+                      <% end %>
+                    </th>
+                    <th class="benefit-font" scope="col">Beneficios</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">&bull;</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">&bull;</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">&bull;</th>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table> 
+          </div>
+        </article>
+      </div>
+      <div class="row">
+        <div class="col-lg-6" style="margin-bottom: 20px">
+         <article id="card-article-company" class="shadow-style" style="border:1px solid #DADBE5;">
+              <p class="subtitulo-company_solution" style="margin-top: 5%;">Soluciones</p>
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons" style="color: #B2BBC1">work</i>
+                </div>
+                <div class="col-9">
+                  <p class="card-validation-company"> Soluciones </p>
+                </div>
+                <div class="col-1">
+                  <p class="card-validation-company"><strong><%= @solutions.size %></strong></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons" style="color: #B2BBC1">done</i>
+                </div>
+                <% sum=0 %>
+                <% @solutions.each do |i| %>
+                  <% sum=sum+i.validated %>
+                <%end%>
+                <div class="col-9">
+                  <p class="card-validation-company"> Soluciones validadas </p>
+                </div>
+                <div class="col-1">
+                  <p class="card-validation-company"><strong><%= sum %></strong></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons" style="color:#11625B">beenhere</i>
+                </div>
+                <div class="col-9">
+                  <p class="card-validation-company" style="font-size: .7em;"> Total de clientes validados</p>
+                </div>
+                <div class="col-1">
+                  <p class="card-validation-company" style="color:#11625B"><strong><%= @clients_all.size %></strong></p>
+                </div>
+              </div>
+            </article>
+         </div>
+        <div class="col-lg-6" style="margin-bottom: 20px">
+          <article id="card-article-special-company" class="shadow-style" style="border:1px solid #DFDDE8;">
+              <p class="subtitulo-company_solution">Experiencia Validada</p>
+              <div>
+                <% branch=[] %>
+                <% @solutions.each do |solution| %>
+                  <% if solution.validated == 1 %>
+                    <% branch << solution.industry_branches %>
+                  <%end%>
+                <% end %>
+                <% branch = branch.flatten.uniq %>
+                <% branch.each do |i| %>
+                  <p class="experiencia-company"><%= i.name %></p>
+                <%end%>  
+              </div>
+            </article>
+        </div>
+      </div>  
+      <div class="row">
+        <div class="w-100" style="margin-left: 1%;">
+        <article id="card-solution-company-description" class="shadow-style">
+              <p class="subtitulo-company_solution">Acerca de la Compañia</p>
+              <div class="w-100">
+                <p class="description-solution-company"> <%= @company.description %></p>
+              </div>
+            </article>
+        </div>
+      </div>
+      <div class="row ">
+        <article id="card-others-solutions"  class="shadow-style" style="width: 99%;">
+              <p class="subtitulo-company_solution" style="margin-left: -6%;">Otras Soluciones</p>
+              <div class="row">
+              <% if @random_solutions.size > 0 %>
+                <% @random_solutions.each do |i| %>
+                    <div class="col-sm-10 col-lg-7 col-xl-5 multiple-cards" style="margin-right: 2%">
+                      <%= render 'solutions/solution', solution: i, contador: nil, edit: false %> 
+                    </div>
+                <%end%>
+              <%else%>
+                  <div class="col-sm-9 col-lg-7 col-xl-5 multiple-cards" style="margin-right: 2%">
+                      <%= render 'partials/solutions_nill', company: @company, contador: 2  %> 
+                  </div>
+              <%end%>
+            </div>
+          </article>
+      </div>
+    </section>
+  </div>
+</main>

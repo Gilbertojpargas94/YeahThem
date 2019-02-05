@@ -1,0 +1,85 @@
+<div class="bar-exit-editor">
+     <%= link_to your_solutions_company_path(1), class:'exit-link' do %>
+        <p> <i class="fa fa-arrow-left"></i> Exit Editor</p>
+    <%end%>
+</div>
+
+<header class="header-editor-profile">
+        
+    <div class="container-edit-profile">
+        <ul>
+            <%= link_to edit_company_path(1) do %>
+                <li>About</li>
+            <%end%>
+            <%= link_to preview_new_solution_path(1) do %>
+                <li>Solutions</li>
+            <%end%>
+            <%= link_to happyclients_solution_path(1) do %>
+                <li>Happy Clients</li>
+            <%end%>
+            <%= link_to thanks_message_company_path(1) do %>
+                <li>Thanks</li>
+            <%end%>
+        </ul>
+    </div>
+    <div class="container-launch-page">
+        <button class="btn btn-default hvr-glow" style="cursor: none; pointer-events: none; padding: 15px 15px;">LANZA TU PÁGINA</button>
+    </div>
+
+    <div class="container-page-title">
+        <h2>Soluciones</h2>
+        <p>Muestra como habéis sabido ayudar ya a vuestros clientes</p>
+    </div>
+</header>
+
+<div class="container-body-form container">
+
+    <div class="row">
+        
+        <div class="col-lg-8 col-sm-12 col-form-cont">
+            
+            <div class="container-window">
+                <div class="menu-editor-solu">
+                    <ul>
+                        <a class=" linkactivepage" href=""> <li>Soluciones</li></a>
+                        <a class="hvr-underline-from-left" href=""> <li>Prácticas Recomendadas</li></a>
+                    </ul>
+                </div>
+
+                <div class="button-center">
+                    <%= link_to new_solution_path do %>
+                        <button class="btn btn-anade-sol hvr-glow">     AÑADE TU PRIMERA SOLUCIÓN</button>
+                    <%end%>
+                </div>
+                
+         
+            </div>
+
+
+      
+        </div>
+
+
+        
+        <div class="col-lg-4 col-sm-12 col-form-progress">
+   <div class="container-window processpart">
+                <div class="left-space">
+                    <div class="circle-p"></div>
+                </div>
+                <div class="process-list">
+                    <p>Tu checklist antes de lanzar:</p>
+
+                    <ul>
+                        <li class="true" ><i class="fa fa-check"></i> Nombre comercial</li>
+                        <li class="true" ><i class="fa fa-check"></i>Especialización</li>
+                        <li class="true" ><i class="fa fa-check"></i>Imagen de portada</li>
+                        <li class="false" ><i class="fa fa-times"></i>Tus soluciones</li>
+                        <li class="false" ><i class="fa fa-times"></i>Tus resultados</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+</div>    

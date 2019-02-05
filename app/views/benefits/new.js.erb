@@ -1,0 +1,20 @@
+$('<%= j render "formmodal" %>').on('shown.bs.modal', function (e) {
+	$('#save-results-not-responsive').click(function(){
+		$('#benefit-modal').modal("hide");
+	});
+
+	var contador=0;
+	  $('#add-benefits').click(function(){
+	    contador++;
+	    if(contador<8)
+	      $('#container-all-results').append('<div class="row"><div class="col-2 col-lg-1">' +
+	        '<i class="fa fa-chevron-circle-right fa-2x" style="color:#DADBE5" aria-hidden="true"></i>' +
+	            '<div class="verticaline"></div></div><div class="col-10 col-lg-11" ><textarea id="texts-areas" class="benefits-area" type="text"  name="Resultado" maxlength="72">' + 
+	            '</textarea><p style="color: #706f6f;">Máximo 72 caracteres</p></div></div>');
+	  });
+ 
+	$(this).on('hidden.bs.modal', function(e){
+		$(this).remove();
+		$('.modal-backdrop').remove();
+	});
+}).modal();

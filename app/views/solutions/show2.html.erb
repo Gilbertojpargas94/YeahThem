@@ -1,0 +1,226 @@
+<main class="main-company_solution">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <aside class="col-sm-5 col-lg-4 col-xl-3 " style="margin-bottom: 25px;">
+      <div class="card shadow-style">
+        <h3 class="title-card-solution"><%= @solution.title %></h3>
+        <%= link_to company_path(@solution.company), style: "text-decoration:none; color: #000;" do %>
+          <section class="card_title" >
+            <div class="row">
+              <div class="col-4">
+                <%= image_tag @solution.company.logo.url(:thumb), class: "image-title-company" %> 
+              </div>
+              <div class="cad-sub-title col" style="margin-left: -25px;">
+                <h5><%= @solution.company.name  %></h5>
+                <h6><%= @solution.company.industries.first.name %> - <%= @solution.industry_branches.first.name %></h6>
+              </div>
+            </div>
+          </section>
+        <% end %>
+        <%= image_tag @solution.picture.url(:medium), class: "img-card" %>
+          <div class="card-body">
+            <p class="card-text line-space"><%= @solution.description_trunc %></p>
+            <div class="container-fluid" style="padding-right: 0px;">
+              <div class="row" style="margin-top: 10px;">
+                <div id="validation-solution">
+                  <i class="material-icons ii  md-18">beenhere</i>
+                </div>
+                <div id="validation-solution-num" style="padding-left: 3px;">
+                  <p class="validado-p"><%= @solution.num_validation%> Validaciones</p>
+                </div>
+                <% cont = 0 %>
+                <div class="img-list">
+                <% @solution.clients.each do |client| %>
+                  <%cont +=1%>
+                  <% if cont <= 5 %>
+                    <% if client.image_url.nil? %>
+                      <%= image_tag "missing_client.png", class: "img-card-list-solution" %>
+                    <% else %>
+                      <%= image_tag client.image_url, class: "img-card-list-solution" %>
+                    <% end %>
+                  <% else %>
+                    <%next%>
+                  <%end%>
+                <%end%> 
+                </div>
+                <% if cont > 5 %>
+                  <div id="validation-card-solution-plus" id="show-validation-plus">
+                    <p class="plus-solutions"> +<%= cont - 5 %></p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="not-responsive" >
+      <% unless @solution.benefits.empty? %>
+        <%= link_to "/auth/linkedin?solution_id=#{@solution.id}", style:"text-decoration: none; color: #fff;" do %>
+          <div class="row validate-solution" style="padding: 5px;">
+            <div class="col-2 col-sm-1 col-md-2"></div>
+            <div class="co-1 pl">
+              <i class="material-icons md-18 ">beenhere</i>
+            </div>
+            <div class="col">
+              <p style="font-weight: bold;max-height: 10px;">Validar esta Solución</p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+      </div>
+    </aside>
+    <section class="col-sm-7 col-lg-8  col-xl-9 information-solution">
+      <div class="row" id="not-responsive">
+       <%= render 'partials/clients', num: 6, edit: false %>
+      </div>
+      <div class="row" id="responsive">
+        <%= render 'partials/clients', num: 4, edit: false %>
+      </div>
+      <div class="row benefits-solutions">
+        <article class="w-100 clients-solutions">
+          <div class="row benefit-table"  style="margin-bottom: 20px;">
+            <table class="table table-striped benefit-table-font">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 3%"></th>
+                    <th class="benefit-font" scope="col">Beneficios Validados</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% cont = 0 %>
+                  <% @solution.benefits.each do |i| %>
+                    <% if i.validated == 1 %>
+                        <% cont+=1 %>
+                      <tr >
+                        <th scope="row">&bull;</th>
+                        <td><%= i.description %></td>
+                      </tr>
+                    <%end%>
+                  <%end%>
+                  <% if cont == 0 %>
+                  <tr>
+                    <th scope="row">&bull;</th>
+                    <td></td>
+                  </tr>
+                  <%end%>
+                </tbody>
+              </table> 
+          </div>
+        </article>
+      </div>
+      <div class="row" id="responsive"> 
+        <div class="container-fluid">
+          <% unless @solution.benefits.empty? %>
+            <%= link_to "/auth/linkedin?solution_id=#{@solution.id}", style:"text-decoration: none; color: #fff;" do %>
+              <div class="row validate-solution" style="padding: 5px;margin-top: -10px;">
+                <div class="col-3"></div>
+                <div class="co-1">
+                  <i class="material-icons md-18 " >beenhere</i>
+                </div>
+                <div class="col"  >
+                  <p style="font-weight: bold;max-height: 10px;" >Validar esta Solución</p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6" style="margin-bottom: 20px">
+         <article class="shadow-style" id="card-article-company" style="border:1px solid #DADBE5;">
+              <p class="subtitulo-company_solution" style="margin-top: 5%;">Soluciones</p>
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons" style="color: #B2BBC1">work</i>
+                </div>
+                <div class="col-9">
+                  <p class="card-validation-company"> Soluciones </p>
+                </div>
+                <div class="col-1">
+                  <p class="card-validation-company"><strong><%= @solutions.size %></strong></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons" style="color: #B2BBC1">done</i>
+                </div>
+                <% sum=0 %>
+                <% @solutions.each do |i| %>
+                  <% sum=sum+i.validated %>
+                <%end%>
+                <div class="col-9">
+                  <p class="card-validation-company"> Soluciones validadas </p>
+                </div>
+                <div class="col-1">
+                  <p class="card-validation-company"><strong><%= sum %></strong></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons" style="color:#11625B">beenhere</i>
+                </div>
+                <div class="col-9">
+                  <p class="card-validation-company" style="font-size: .7em;"> Total de clientes validados</p>
+                </div>
+                <div class="col-1">
+                  <p class="card-validation-company" style="color:#11625B"><strong><%= @clients_all.size %></strong></p>
+                </div>
+              </div>
+              <div style="text-align: center;">
+                <%= link_to 'Visitar pagina de Soluciones',company_path(@solution.company), class: "visit-solutions text-center text-secundary", style: "text-decoration: none;color: #706f6f;" %>
+              </div>
+            </article>
+         </div>
+        <div class="col-lg-6" style="margin-bottom: 20px">
+          <article class="shadow-style" id="card-article-special-company" style="border:1px solid #DFDDE8;">
+              <p class="subtitulo-company_solution">Experiencia Validada</p>
+              <div>
+                <% branch=[] %>
+                <% @solutions.each do |solution| %>
+                  <% if solution.validated == 1 %>
+                    <% branch << solution.industry_branches %>
+                  <%end%>
+                <% end %>
+                <% branch = branch.flatten.uniq %>
+                <% branch.each do |i| %>
+                  <p class="experiencia-company"><%= i.name %></p>
+                <%end%>  
+              </div>
+            </article>
+        </div>
+      </div>  
+      <div class="row contactar-soluciones">
+        <div style="text-align: center;width: 100%;">
+          <%= link_to new_contact_modal_contact_path(@solution.company_id), remote: true, style:"text-decoration: none;" do %>
+            <p class="p-contactar">Contactar</p>
+          <%end%>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="w-100" style="margin-left: 1%;">
+        <article class="shadow-style" id="card-solution-company-description">
+              <p class="subtitulo-company_solution">Acerca de la Compañia</p>
+              <div class="w-100">
+                <p class="description-solution-company"> <%= @solution.company.description %></p>
+              </div>
+            </article>
+        </div>
+      </div>
+      <div class="row ">
+        <article  class="shadow-style" id="card-others-solutions" style="width: 99%;">
+              <p class="subtitulo-company_solution" style="margin-left: -6%;">Otras Soluciones</p>
+              <div class="row">
+                <% @random_solutions.each do |i| %>
+                  <% if i == @solution %>
+                   <% next %>
+                  <%else%>
+                    <div class="col-sm-10 col-lg-7 col-xl-5 multiple-cards" style="margin-right: 2%">
+                      <%= render 'solutions/solution', solution: i, contador: nil, edit: false %> 
+                    </div>
+                  <%end%>
+                <%end%>
+              </div>
+          </article>
+      </div>
+    </section>
+  </div>
+</main>

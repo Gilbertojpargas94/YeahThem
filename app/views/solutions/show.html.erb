@@ -1,0 +1,459 @@
+<%= render 'partials/navbar' %>
+<header class="container-fluid header-sol">
+ <%= image_tag "bridge-bg.jpg", class: 'backgroundCover' %>
+    <div class="space-header-left"></div>
+    <div class="content-header ">
+        <div class="logo-img">
+            <%= image_tag "loglnavbar.png",  class: 'avatar' %>
+            <h3 class="titlelogo">Counsel on Call</h3>
+        </div>
+        <div class="menu-header">
+
+            <div id='cssmenu'>
+
+                <ul>
+                    <li class='active'><a href='#'><span>How We Help Clients</span></a></li>
+                    <li><a href='#'><span>Happy Clientes</span></a></li>
+
+
+                </ul>
+                <!-- OJOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CON ESToooooooooooooooooooooooo -->
+                <%= link_to new_contact_modal_contact_path(1), remote: true, style:"text-decoration: none;margin-left:auto;" do %>
+                    <button class="btn button-contactus hvr-glow">Contact</button>
+                <%end%>
+            </div>
+
+            <div class="container-conts-header">
+                <div class="box-cont">
+                    <div class="cont-results">
+                        <h3>3</h3>
+                        <p>Soluciones</p>
+                    </div>
+                </div>
+
+                <div class="box-cont">
+                    <div class="cont-results">
+                        <h3>1</h3>
+                        <p>Soluciones</p>
+                    </div>
+                </div>
+
+                <div class="box-cont">
+                    <div class="cont-results">
+                        <h3>32</h3>
+                        <p>Soluciones</p>
+                    </div>
+                </div>
+
+                <div class="box-cont">
+                    <div class="cont-results">
+                        <h3>34</h3>
+                        <p>Soluciones</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</header>
+<!-- barra blanca-->
+<div class="behind">
+
+    <!-- contenido de los contadores de cada item-->
+    <div class="container-conts">
+        <div class="box-cont">
+            <div class="cont-results">
+                <h3>3</h3>
+                <p>Soluciones</p>
+            </div>
+        </div>
+
+        <div class="box-cont">
+            <div class="cont-results">
+                <h3>1</h3>
+                <p>Soluciones</p>
+            </div>
+        </div>
+
+        <div class="box-cont">
+            <div class="cont-results">
+                <h3>32</h3>
+                <p>Soluciones</p>
+            </div>
+        </div>
+
+        <div class="box-cont">
+            <div class="cont-results">
+                <h3>34</h3>
+                <p>Soluciones</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- body-->
+<div class="navbar-container">
+
+</div>
+<div class="container body-cont">
+    <div class="row rowb">
+        <div class="col-lg-3 col-sm-12 colb mb-md-4">
+
+                 
+            <div class="menu-left ihc">
+                <div class="container-new-client ">
+                    <div class="userdefault"> 
+                        <%= image_tag ("login-cli.png") %>
+                    </div>
+                    <div class="container-imhappyclient">
+                        <h3 class="m-title m-title-imnc">I'm a Happy Client <%= image_tag ("Logo4.png") %></h3>
+                        <%= link_to  validate_solution_path, remote: true do %>
+                            <button class="btn buttonYellow">Yes</button>
+                        <%end%>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="col-lg-6 col-sm-12 colb mb-md-4">
+                <div class="menu-front-title">
+                    <h4>Soluciones</h4>
+                </div>
+            <div class="menu-front-container">
+
+                <div class="container-solution-show">
+                    <div class="container-fluid" style="padding-left: 0;padding-right: 0px;">
+                        <div class="container-solution-1 row" style="margin-left: 0;margin-right: 0px;"">
+                            <div class="side-text col-sm-6 col-12 order-last order-sm-first">
+                                <!-- contenido-->
+                                <div class="content">
+                                    <h4 class="sol-title">Titulo</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, a.</p>
+                                </div>
+                                <div class="hc-sol">
+                                    <p> 
+                                        <i class="material-icons is">sentiment_very_satisfied</i> 
+                                        <span>4 Happy Clients </span> 
+                                        con esta solución
+                                    </p>
+                                </div>
+                                <!-- footer solution-->
+                            </div>
+                            <!-- triangle-->
+                            <div class="triangle"></div>
+                            <!-- imagen-->
+                            <div class="side-img col-sm-6 col-12 order-first order-sm-last" style="padding: 0px;">
+                                <%= image_tag "negocio-bg.png" %>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- resultados-->
+                    <div class="menu-front-resul">
+                        <h4>Resultados</h4>
+                    </div>
+                    <div style="border-top: none;" class="results-sol">
+                        <div class="m-content cont-sol-result">
+                            <!-- resultados-->
+                            <ul>
+                                <!-- Cada item de resultados-->
+                                <div class="div-container-item-resul border-resul-front-sol">
+                                    <li>One project document controller
+                                    <div class="hc-res ">
+                                        <p> 
+                                            <i class="material-icons is">sentiment_very_satisfied</i>
+                                            <span>4 Happy Clients </span>
+                                            con este resultado
+                                        </p>
+                                    </div>
+                                    </li>
+                                </div>
+                                 <!-- Cada item de resultados-->
+                                <div class="div-container-item-resul border-resul-front-sol">
+                                    <li>One project document controller
+                                    <div class="hc-res ">
+                                        <p> 
+                                            <i class="material-icons is">sentiment_very_satisfied</i>
+                                            <span>4 Happy Clients </span>
+                                            con este resultado
+                                        </p>
+                                    </div>
+                                    </li>
+                                </div>
+                                 <!-- Cada item de resultados-->
+                                <div class="div-container-item-resul border-resul-front-sol">
+                                    <li>One project document controller
+                                    <div class="hc-res ">
+                                        <p> 
+                                            <i class="material-icons is">sentiment_very_satisfied</i>
+                                            <span>4 Happy Clients </span>
+                                            con este resultado
+                                        </p>
+                                    </div>
+                                    </li>
+                                </div>
+                                 <!-- Cada item de resultados-->
+                                <div class="div-container-item-resul border-resul-front-sol">
+                                    <li>One project document controller
+                                    <div class="hc-res ">
+                                        <p> 
+                                            <i class="material-icons is">sentiment_very_satisfied</i>
+                                            <span>4 Happy Clients </span>
+                                            con este resultado
+                                        </p>
+                                    </div>
+                                    </li>
+                                </div>
+                                 <!-- Cada item de resultados-->
+                                <div class="div-container-item-resul border-resul-front-sol">
+                                    <li>One project document controller
+                                    <div class="hc-res ">
+                                        <p> 
+                                            <i class="material-icons is">sentiment_very_satisfied</i>
+                                            <span>4 Happy Clients </span>
+                                            con este resultado
+                                        </p>
+                                    </div>
+                                    </li>
+                                </div>
+                                <div class="w-100" id="more-results" style="display: none;">
+                                    <!-- Cada item de resultados-->
+                                    <div class="div-container-item-resul border-resul-front-sol">
+                                        <li>One project document controller
+                                        <div class="hc-res ">
+                                            <p> 
+                                                <i class="material-icons is">sentiment_very_satisfied</i>
+                                                <span>4 Happy Clients </span>
+                                                con este resultado
+                                            </p>
+                                        </div>
+                                        </li>
+                                    </div>
+                                     <!-- Cada item de resultados-->
+                                    <div class="div-container-item-resul border-resul-front-sol">
+                                        <li>One project document controller
+                                        <div class="hc-res ">
+                                            <p> 
+                                                <i class="material-icons is">sentiment_very_satisfied</i>
+                                                <span>4 Happy Clients </span>
+                                                con este resultado
+                                            </p>
+                                        </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="w-100" style="padding-left: 3%;">
+                                <span style="cursor: pointer;" onclick="showmore1()">
+                                    <span id="show-more-results" class="drows-results">Mostrar más</span>
+                                    <i id="down1"  class="fa fa-chevron-down drows-results" aria-hidden="true"></i>
+                                    <i id="up1" style="display: none;" class="fa fa-chevron-up drows-results" aria-hidden="true"></i>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- clientes-->
+                    <div class="results-sol">
+                        <div class="header-rsol">
+                            <h3 class="m-title ">Happy Clients</h3>
+                            <div class="in"> 
+                                <%= image_tag ("linked-in-logo.png") %>
+                                <br/>
+                                <p>Information</p>
+                            </div>
+                        </div>
+                        <div class="m-content cont-sol-result">
+                            <div class="client" id="width-clients" >
+                                <div class="photoc">
+                                   <%= image_tag "missing_client.png", class: 'userl' %>
+                              
+                                </div>
+                                     <%= image_tag "linked-in.png",class:'img-linked' %>
+                                     
+                                <div class="cont-cli">
+                                    <p>Nombre</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>amet.</p>
+                                </div>
+                            </div>
+                            <div class="client" id="width-clients">
+                                <div class="photoc">
+                                   <%= image_tag "missing_client.png", class: 'userl' %>
+                              
+                                </div>
+                                     <%= image_tag "linked-in.png",class:'img-linked' %>
+                                     
+                                <div class="cont-cli">
+                                    <p>Nombre</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>amet.</p>
+                                </div>
+                            </div>
+                            <div class="client" id="width-clients">
+                                <div class="photoc">
+                                   <%= image_tag "missing_client.png", class: 'userl' %>
+                              
+                                </div>
+                                     <%= image_tag "linked-in.png",class:'img-linked' %>
+                                     
+                                <div class="cont-cli">
+                                    <p>Nombre</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>amet.</p>
+                                </div>
+                            </div>
+                            <div class="client" id="width-clients">
+                                <div class="photoc">
+                                   <%= image_tag "missing_client.png", class: 'userl' %>
+                              
+                                </div>
+                                     <%= image_tag "linked-in.png",class:'img-linked' %>
+                                     
+                                <div class="cont-cli">
+                                    <p>Nombre</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>amet.</p>
+                                </div>
+                            </div>
+                            <div class="client" id="width-clients">
+                                <div class="photoc">
+                                   <%= image_tag "missing_client.png", class: 'userl' %>
+                              
+                                </div>
+                                     <%= image_tag "linked-in.png",class:'img-linked' %>
+                                     
+                                <div class="cont-cli">
+                                    <p>Nombre</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>amet.</p>
+                                </div>
+                            </div>
+                            <div class="client" id="width-clients">
+                                <div class="photoc">
+                                   <%= image_tag "missing_client.png", class: 'userl' %>
+                              
+                                </div>
+                                     <%= image_tag "linked-in.png",class:'img-linked' %>
+                                     
+                                <div class="cont-cli">
+                                    <p>Nombre</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>amet.</p>
+                                </div>
+                            </div>
+                            <div class="client" id="width-clients">
+                                <div class="photoc">
+                                   <%= image_tag "missing_client.png", class: 'userl' %>
+                              
+                                </div>
+                                     <%= image_tag "linked-in.png",class:'img-linked' %>
+                                     
+                                <div class="cont-cli">
+                                    <p>Nombre</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>amet.</p>
+                                </div>
+                            </div>
+                            <div class="client" id="width-clients">
+                                <div class="photoc">
+                                   <%= image_tag "missing_client.png", class: 'userl' %>
+                              
+                                </div>
+                                     <%= image_tag "linked-in.png",class:'img-linked' %>
+                                     
+                                <div class="cont-cli">
+                                    <p>Nombre</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>amet.</p>
+                                </div>
+                            </div>
+                            <div class="w-100" id="more-happyclients" style="display: none;">
+                                <div class="client" id="width-clients" style="display: inline-block;">
+                                    <div class="photoc">
+                                       <%= image_tag "missing_client.png", class: 'userl' %>
+                                  
+                                    </div>
+                                         <%= image_tag "linked-in.png",class:'img-linked' %>
+                                         
+                                    <div class="cont-cli">
+                                        <p>Nombre</p>
+                                        <p>Lorem ipsum dolor sit.</p>
+                                        <p>amet.</p>
+                                    </div>
+                                </div>
+                                <div class="client" id="width-clients" style="display: inline-block;">
+                                    <div class="photoc">
+                                       <%= image_tag "missing_client.png", class: 'userl' %>
+                                  
+                                    </div>
+                                         <%= image_tag "linked-in.png",class:'img-linked' %>
+                                         
+                                    <div class="cont-cli">
+                                        <p>Nombre</p>
+                                        <p>Lorem ipsum dolor sit.</p>
+                                        <p>amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100" style="padding-left: 3%;padding-bottom: 4%;">
+                                <span style="cursor: pointer;" onclick="showmore2()">
+                                    <span id="show-more-happyclients" class="drows-results">Mostrar más</span>
+                                    <i id="down2" class="fa fa-chevron-down drows-results" aria-hidden="true"></i>
+                                    <i id="up2" style="display: none;" class="fa fa-chevron-up drows-results" aria-hidden="true"></i>
+                              </span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-sm-12 colb">
+
+            <div class="menu-result-title">
+                <h4>Resultados</h4>
+            </div>
+            
+                <div class="menu-left space-bottom-windows">
+                
+                    <p>Law related complex issues</p>
+                
+                    <div class="content-social-left">
+                
+                        <ul class="social-left">
+                            <a href=""> <li> <i class="fa fa-facebook"></i></li></a>
+                            <a href=""> <li></li><i class="fa fa-twitter-square"></i></li></a>
+                            <a href=""> <li></li><i class="fa fa-youtube"></i></li></a>
+                            <a href=""> <li></li><i class="fa fa-linkedin"></i></li></a>
+                        </ul>
+                    </div>
+                </div>
+
+<div class="menu-left-title">
+    <h4>Categorias</h4>
+</div>
+
+            <div class="menu-right ">
+                <div class="m-right">
+                      <div class="m-content cont-about">
+                     Law & Tax
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<%= render 'partials/footer_yeahthem' %>

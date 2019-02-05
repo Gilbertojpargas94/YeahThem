@@ -1,0 +1,26 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: one
+  title: MyString
+  description: MyString
+  num_validation: 1
+  validated: 1
+  status: 1
+
+#two:
+#  company: two
+#  title: MyString
+#  description: MyString
+#
+#  num_validation: 1
+#  validated: 1
+#  status: 1
+
+for_benefit_test:
+  company_id: 1
+  title: MyString
+  description: MyString
+  num_validation: 1
+  validated: 1
+  status: 1

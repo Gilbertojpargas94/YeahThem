@@ -1,0 +1,191 @@
+<aside class="col-sm-6 col-lg-4 col-xl-3">
+  <div class="card aside-infomation" style="margin-bottom: 20px;">
+    <h3 class="title-card-company"><%= @company.name %></h3>
+    <section class="card_title_company">
+      <div class="row">
+        <div class="col-4">
+        <%= image_tag @company.logo.url(:thumb), class: "image-title-company" %>
+        </div>
+        <div class="cad-sub-title col" style="margin-left: -25px" >
+          <h6 class="company-info-space" id="card-company-industry"><%= @company.industries.first.name %></h6>
+          <i class="material-icons location-icon">location_on</i>
+          <p class="direccion"><%= @company.address.truncate(40,separator: /\s/) %></p>
+        </div>
+      </div>
+      <div class="button-company">
+        <div style="text-align: center;width: 100%;padding-top: 3px;padding-bottom: 3px;">
+         <%= link_to new_contact_modal_contact_path(@company.id), remote: true, style:"text-decoration: none;" do %>
+            <p class="p-contactar" style="font-weight: normal;">Contactar</p>
+          <%end%>
+        </div>
+      </div> 
+    </section>
+  </div>
+  <div class="row aside-info" id="option-view-company">
+    <div class="col-2"></div>
+    <div class="col-4" id="option-informacion-company" onclick="Information()">Información</div>
+    <div class="col-4" id="option-solution-company" onclick="Solution()">Soluciones</div>
+  </div>
+  <div id="show-information" class="aside-infomation">
+    <div class="card">
+     <div class="card-body" id="card-body-company" >
+        <article id="card-article-company">
+          <p class="subtitulo-company_solution">Soluciones</p>
+          <div class="row">
+            <div class="col-1">
+              <i class="material-icons" style="color: #B2BBC1">work</i>
+            </div>
+            <div class="col-8">
+              <p class="card-validation-company"> Soluciones </p>
+            </div>
+            <div class="col-2">
+              <p class="card-validation-company"><strong><%= @company.solutions.size %></strong></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <i class="material-icons" style="color: #B2BBC1">done</i>
+            </div>
+            <% sum=0 %>
+            <% @company.solutions.each do |i| %>
+              <% sum=sum+i.validated %>
+            <%end%>
+            <div class="col-8">
+              <p class="card-validation-company"> Soluciones validadas </p>
+            </div>
+            <div class="col-2">
+              <p class="card-validation-company"><strong><%= sum %></strong></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <i class="material-icons" style="color:#11625B">beenhere</i>
+            </div>
+            <div class="col-8">
+              <p class="card-validation-company" style="font-size: .7em;"> Total de clientes validados</p>
+            </div>
+            <div class="col-2">
+              <p class="card-validation-company" style="color:#11625B"><strong><%= @clients_all.size %></strong></p>
+            </div>
+          </div>
+        </article>
+        <article id="card-article-company" style="padding-top: 20px;">
+          <div class="row" >
+            <div class="col-4">
+              <p class="card-subtiso-company">Clientes</p>
+            </div>
+            <div class="col-4">                  
+            </div>
+            <div class="col-4">
+              <%= image_tag "linkedin.jpeg", class: "w-100" %>
+            </div>
+          </div>
+          <% if not @clients_all.empty? %>
+            <% cath_index = 0 %>
+            <div class="row">
+              <% @clients_all.each_with_index do |client, index| %>
+                <% if index < 6 %>
+                  <div class="col-6"> 
+                    <% if client.image_url.nil? %>
+                      <%= image_tag "missing_client.png", class: "img-clientes" %>
+                    <% else %>
+                      <%= image_tag client.image_url, class:"img-clientes"%>
+                    <% end %>
+                    <div class="article-ps-company">
+                      <p class="p-solution_company" style="color: black"><%= client.company_name %></p>
+                      <p class="p-solution_company" ><%= client.title %></p>
+                    </div>
+                  </div>
+                  <% cath_index = index + 1  %>
+                <% end %>
+              <% end %>
+            </div>
+            <% if @clients_all.size > cath_index %>
+              <div id="myDIV">
+                <div class="row">
+                  <% @clients_all.drop(cath_index).each do |client| %>
+                    <div class="col-6">
+                      <% if client.image_url.nil? %>
+                        <%= image_tag "missing_client.png", class: "img-clientes" %>
+                      <% else %>
+                        <%= image_tag client.image_url, class:"img-clientes"%>
+                      <% end %>
+                      <div class="article-ps-company">
+                        <p class="p-solution_company" style="color: black"><%= client.company_name %></p>
+                        <p class="p-solution_company" ><%= client.title %></p>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          <% else %> <!-- else of if not @clients_all.empty? -->
+            <div class="row">
+              <div class="col-6">
+                <%= image_tag "head_1.png", class: "img-clientes" %>
+                <div class="article-ps-company">
+                  <p class="p-solution_company" >Iberdrola</p>
+                  <p class="p-solution_company" >Consultor Sap</p>
+                  <p class="p-solution_company" >BO Junior</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <%= image_tag "head_2.png", class: "img-clientes" %>
+                <div class="article-ps-company">
+                  <p class="p-solution_company" >Fenosa</p>
+                  <p class="p-solution_company" >Consultor Sap</p>
+                  <p class="p-solution_company" >BO Junior</p>
+                </div>
+              </div>
+            </div>
+            <div id="myDIV">
+              <div class="row">
+                <div class="col-6">
+                  <%= image_tag "head_2.png", class: "img-clientes" %>
+                  <div class="article-ps-company">
+                    <p class="p-solution_company" >Adidas</p>
+                    <p class="p-solution_company" >Consultor Sap</p>
+                    <p class="p-solution_company" >BO Junior</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <%= image_tag "head_1.png", class: "img-clientes" %>
+                  <div class="article-ps-company">
+                    <p class="p-solution_company" >Sony</p>
+                    <p class="p-solution_company" >Consultor Sap</p>
+                    <p class="p-solution_company" >BO Junior</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %> <!-- End of If -->
+          <div class="row" style="cursor: pointer;" onclick="myFunction()">
+            <div class="col-6" ><p id="see-more">Ver mas</p></div>
+            <div class="col-5"><i class="material-icons"  id="myii"> keyboard_arrow_down</i> <i class="material-icons" id="myi">keyboard_arrow_up</i></div>     
+          </div>
+        </article>
+        <article id="card-article-special-company">
+          <p class="card-subtiso-company">Experiencia Validada</p>
+          <div>
+            <% branch=[] %>
+            <% @company.solutions.each do |solution| %>
+              <% if solution.validated == 1 %>
+                <% branch << solution.industry_branches %>
+              <%end%>
+            <% end %>
+            <% branch = branch.flatten.uniq %>
+            <% branch.each do |i| %>
+              <p class="experiencia-company"><%= i.name %></p>
+            <%end%>  
+          </div>
+        </article>
+        <article id="card-special-company">
+          <p class="card-subtiso-company">Acerca de <%= @company.name %></p>
+          <article id="company-description">
+            <%= @company.description %> 
+          </article>
+        </article>
+      </div>
+    </div>
+  </div>
+</aside>

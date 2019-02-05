@@ -1,0 +1,2684 @@
+// Place all the styles related to the Companies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.links-solutions:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.button-contactusmobil{
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+
+    display: none;
+    background: #6CC33C;
+    width: 100%;
+    height: 60px;
+    transition: all 0.4s;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom:25px;
+    cursor: pointer;
+}
+
+
+.image-upload > input
+{
+   display: none;
+}
+.image-upload > label{
+  cursor:pointer;
+}
+
+.image-upload > .field > input
+{
+   display: none;
+}
+.image-upload > .field > label{
+  cursor:pointer;
+}
+
+.title-card-company{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.3em;
+	margin-left: 7%;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.image-title-company{
+	width: 90%;
+	height: 50px;
+	border-radius: 50%;
+	margin-bottom: 10%;
+	display: inline-block;
+}
+.location-icon{
+	display: inline-block;
+	color: #B2BBC1;
+}
+.direccion{
+	display: inline-block;
+	width: 70%;
+	color: #B2BBC1;
+}
+
+#card-company-industry{
+	margin-left: 2%;
+	color: #706f6f;
+	margin-bottom: -2px;
+}
+.button-company{
+	background-color: #11625B;
+	color: white;
+	margin-right: 7%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.card-validation-company{
+	font-size: .75em;
+	color:#706f6f ;
+	font-family: Segoe UI, sans-serif;
+	float: left
+}
+
+
+.card_title_company{
+	padding-left: 7%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #DADBE5;
+}
+#card-body-company{
+	padding-left: 0%;
+	padding-right: 0%;
+	width: 100%;
+}
+
+
+.img-linke{
+	width: 100%;
+
+}
+#card-article-special-company{
+	padding-top: 20px;
+	padding-bottom:  20px;
+	padding-left: 7%;
+	border-bottom: 1px solid #DADBE5;
+}
+.img-clientes{
+	width: 40%;
+	height: 40px;
+	border-radius: 50%;
+}
+.article-ps-company{
+	margin-top: 25px;
+}
+
+
+.experiencia-company{
+	margin-right: 5%;
+	padding: 3% 5% 3% 5%;
+	background-color: #11625B;
+	color: white;
+	font-family: 'Lato', sans-serif;
+	border-radius: 5px;
+	display: inline-block;
+}
+#company-description{
+	font-family: Segoe UI, sans-serif;
+	font-size: .75em;
+	color: #706f6f;
+}
+#card-special-company{
+	padding-top: 20px;
+	padding-bottom:  20px;
+	padding-left: 7%;
+
+}
+
+
+#option-view-company{
+	margin-bottom: 4%;
+	margin-top: -2%;
+	width: 100%;
+	display: none;
+
+}
+
+#option-informacion-company{
+	cursor: pointer;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	display: inline;
+
+}
+
+#option-solution-company{
+	cursor: pointer;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	border-left: 4px solid #DFDDE8;
+	display: inline;
+}
+#show-information{
+	margin-top: -9%;
+	display: block;
+}
+
+.links-new-solutions:hover{
+	text-decoration: none;
+	color: inherit;
+}
+
+.card-subtiso-company{
+	font-weight: bold;
+}
+
+.company-info-space {
+	margin-left: 2em;
+}
+#share-edit-link{
+	margin-right: -30px;
+}
+
+/*new view css*/
+
+// colores estandares
+
+//fondo background
+$bgcolor:#D7E2E5;
+$bgwhite:#ffffff;
+$bgheadermenu:#E5E3E4;
+//color botones
+$colorbtorange:#F96855;
+$colorbtblue:#0173B1;
+$colorbtoliva:#498273;
+$colorbdisable:#C5C5C5;
+$colorbtgreen:#6FC23D;
+$colorbtgreenn:#6CC33C;
+$colorbtyelow:#FFB900;
+$colorlink:#A9A9A9;
+$colorsides:rgb(134, 134, 134);
+
+//colores elementos
+$greenarrow:#1B3F59;
+$olivia:#498273;
+$greentitleleft:#08C853;
+$orangetitleright:#F95400;
+$redtitle:#FF5359;
+$bluetitle:#238AFF;
+$bluelinkheadermenu:#0087FF;
+$sociallinks:#B3B3B3;
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-30 { font-size: 30px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.navbar-top-menu{
+    width: 100%;
+    height: 50px;
+    background: white;
+    
+}
+
+  .content-header{
+        display: flex;
+        flex-wrap: wrap;
+        background: white;
+        width: 80%;
+        height:135px;  
+        margin: auto;
+        position: relative;
+        top:160px;
+
+
+    }
+
+    .logo-img{
+        width: 20%;
+        background: $bgheadermenu;
+        text-align: center;
+    }
+
+     .logo-img img{
+         margin-top: 20px;
+        width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+     }
+  .logo-img h3{
+      font-size: 18px;
+      
+  }
+    .menu-header{
+        width: 80%;
+    }
+
+    
+.navbar-top-menu{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid $colorbdisable;
+    padding-top: 5px;
+    
+    
+}
+
+
+.menu-navbar-nv{
+ text-align: center;
+}
+
+
+.menu-navbar-nv div i{
+
+}
+    .menu-navbar-nv{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+
+    .search{
+        position:relative;
+      width:50%;
+      margin-right: 20px;
+        form{
+            position: absolute;
+            right:    0px;
+        }
+    }
+
+
+
+    .menu-navbar-nv{
+        
+        display: flex;
+        justify-content: space-around;
+
+        .yoursolutions-nv,.register-nv,.help-nv,.login-nv{
+            width: 90px;
+        }
+    }
+
+/*navbar*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+#cssmenu {
+    background: rgba(255, 255, 255, 0);
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 25px;
+    padding: 0px 20px;
+}
+
+.behind {
+    background: white;
+    width: 100%;
+    height: 70px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.151);
+    margin-bottom: 80px;
+}
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    top: -65px;
+    border: 4px solid $bgcolor;
+}
+
+  .header-bar-white{
+        margin: auto;
+
+    }  
+    .container-conts{
+        display: flex;
+        justify-content: center;
+       
+
+    }  
+
+     .container-conts-header{
+     
+        justify-content: left;
+        margin-top: 20px;
+        display: none ;
+
+   
+
+    }  
+
+    .box-cont{
+        width: 120px;
+         margin-top: 10px;
+         
+    }
+    .cont-results{
+        text-align: center;
+
+        h3{
+            font-size:20px;
+            color:$bluetitle;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+    }
+
+
+#cssmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: block;
+    zoom: 1;
+    margin-top: 5px;
+}
+
+#cssmenu ul:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#cssmenu ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#cssmenu.align-right ul li {
+    float: right;
+}
+
+#cssmenu.align-center ul {
+    text-align: center;
+}
+
+#cssmenu ul li a {
+    color: $bluelinkheadermenu;
+    text-decoration: none;
+    display: block;
+    padding: 22px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    -webkit-transition: color .25s;
+    -moz-transition: color .25s;
+    -ms-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
+}
+
+#cssmenu ul li a:hover {
+    color: #506775;
+}
+
+#cssmenu ul li a:hover:before {
+    width: 100%;
+}
+
+#cssmenu ul li a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -3px;
+    top: 19px;
+    height: 6px;
+    width: 6px;
+    background: #ffffff;
+    opacity: .5;
+}
+
+#cssmenu ul li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: $bluelinkheadermenu;
+    -webkit-transition: width .25s;
+    -moz-transition: width .25s;
+    -ms-transition: width .25s;
+    -o-transition: width .25s;
+    transition: width .25s;
+}
+
+#cssmenu ul li.last>a:after,
+#cssmenu ul li:last-child>a:after {
+    display: none;
+}
+
+#cssmenu ul li.active a {
+    color: $bluelinkheadermenu;
+}
+
+#cssmenu ul li.active a:before {
+    width: 100%;
+}
+
+#cssmenu.align-right li.last>a:after,
+#cssmenu.align-right li:last-child>a:after {
+    display: block;
+}
+
+#cssmenu.align-right li:first-child a:after {
+    display: none;
+}
+
+
+
+.navbar-container {
+    width: 80%;
+    margin: auto;
+   background: red;
+
+}
+
+.button-contactus {
+    background: $colorbtgreenn;
+    width: 150px;
+    height: 45px;
+    transition: all 0.4s;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+.navbar-container {
+    margin-top: 10px;
+}
+
+#titlenav {
+    margin-left: 150px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.container-body {
+    background: $bgcolor;
+    /*height: 100%;*/
+}
+
+
+.menu-front-container {
+    background: white;
+    width: 100%;
+}
+
+.menu-left .spanmenuleft {
+    display: block;
+    padding-bottom: 5px;
+ 
+}
+
+.menu-left{
+       font-weight: bold;
+}
+
+.menu-left .spanmenuleft span {
+    float: right;
+}
+
+
+.rowb {
+    padding-top: 0px !important;
+    margin-top: -50px;
+}
+
+.m-title {
+    font-size: 20px;
+    padding: 10px 0px 20px 0px
+}
+
+.cont-sol-left {
+
+    margin: 5px 0px;
+    
+}
+
+.cont-sol-left  li.item-cont-sol::before {
+    content: "• ";
+    color: #048276;
+    font-size: 15px;
+    /* or whatever color you prefer */
+}
+
+.cont-sol-left .inside{
+padding-left: 20px;
+}
+
+.cont-sol-left .inside li::before {
+  content: "> ";
+    color: #048276;
+    font-size: 15px;
+    font-weight: bold !important;
+}
+
+
+.m-content {}
+
+.menu-right {
+    margin-bottom: 25px;
+}
+
+.sol-title {
+    color: $bluetitle;
+    margin-bottom: 10px;
+}
+
+
+
+.logo-sol-item {
+    width: 30px;
+    height: 30px;
+}
+
+.container-solution-1,
+.container-solution-2 {
+    width: 100%;
+    min-height: 280px;
+    position: relative;
+    display: flex;
+}
+
+.footer-container-solution {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-fo-inside {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    margin: auto;
+    position: relative;
+    top: 0px;
+}
+
+.side-text {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.side-img{
+    position: relative;
+    height: auto;
+
+}
+
+
+
+.triangle {
+    width: 65px;
+    height: 65px;
+    background: white;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 50%;
+    margin-left: -33px;
+    transform: scale(0.7, 0.5) rotate(45deg);
+}
+
+/* configuracion de menu-dere*/
+
+.content-social-left {
+    margin-top: 40px;
+}
+
+.content-social-left i {
+    font-size: 20px;
+}
+
+.social-left {
+    width: 100%;
+    margin: 0px !important;
+    padding: 0px;
+}
+
+.social-left li {
+    display: inline;
+    list-style: none;
+}
+
+.social-left a {
+    color: $sociallinks;
+    transition: all 0.4s;
+    margin-right: 4px;
+}
+
+.social-left a:hover {
+    color: black;
+}
+
+.social-left a {}
+
+.m-right .cont-sol-result li::before {
+    content: "• ";
+    color: #048276;
+    font-size: 15px;
+    /* or whatever color you prefer */
+}
+
+.m-content {
+    padding: none !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.m-right .cont-sol-left li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: initial;
+    color:black;
+    font-weight: bold;
+}
+
+.m-right .m-title ul li {
+    font-weight: bold;
+}
+
+.m-right .m-title {
+    color: #6c757d;
+}
+
+.menu-right {
+    /*width: 250px;*/
+}
+
+
+.button-contactus{
+margin-left: auto;
+ }
+
+ /*definiion de los titulos div*/
+ .menu-left-title{
+     background: white;
+     padding-left: 20px;
+     padding-top: 10px;
+     border-top: 4px solid $greentitleleft;
+     height: 53px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+   
+ }
+ .menu-left-title h4, .menu-right-title h4,.menu-result-title h4,.menu-front-title h4{
+ font-size: 18px;
+ }
+
+ .menu-right-title{
+     background: white;
+     padding-left: 20px;
+     padding-top: 10px;
+     border-top: 4px solid $greentitleleft;
+     height: 53px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+   
+ }
+
+ .menu-result-title{
+     background: white;
+     padding-left: 20px;
+     padding-top: 10px;
+     border-top: 4px solid $orangetitleright;
+     height: 53px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+ }
+
+ .menu-front-title{
+     background: white;
+     text-align: center;
+     padding: 10px 0px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+     
+ }
+
+ /*footer*/
+
+
+    footer.footer-page{
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+
+
+
+.content-foo{
+
+    margin-top: 8px;
+}
+
+.content-foo a{
+ color:#B3B3B3;
+ text-decoration: none;  
+ margin-left: 20px; 
+ transition: all 0.4s;
+ text-decoration:none;
+}
+
+.content-foo a:hover{
+ color:$colorsides;
+}
+
+
+
+/* pagina registro solucion*/
+.container-new-client{
+    display: flex;
+}
+
+
+.hc-res{
+    margin-top: 5px;
+    font-size: 13px;
+    color:$colorsides;
+}
+
+.hc-sol span{
+font-weight: bold;
+}
+
+
+
+.item-result-each-num{
+    font-weight: initial;
+    padding-top: 10px;
+}
+
+.container-imhappyclient{
+
+}
+
+.container-imhappyclient .m-title-imnc{
+    font-size: 17px;
+
+    
+}
+.m-title-imnc img{
+    
+    display: none;
+}
+
+.userdefault img{
+    width: 70px;
+}
+
+.container-imhappyclient .buttonYellow{
+width: 100%;
+background: $colorbtyelow;
+color:$bgwhite;
+font-weight: bold;
+}
+
+
+
+.header-rsol{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-sol{
+    position: relative;
+}
+
+
+.cont-about{
+    font-weight: 600;
+    color:$colorsides;
+
+}
+
+.link{
+color:$colorlink;
+margin-left:25px;
+}
+
+.client .photoc{
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    margin: auto;
+     position: relative;
+}
+
+.client .user{
+
+}
+
+.client .img-linked{
+    width:17px;
+     position: absolute;
+         top: 40px;
+    right: 20px;
+}
+
+.client .cont-cli{
+
+   
+    h4{
+        font-size:12px;
+          text-align: left;
+       
+    }
+
+    p{
+        font-size: 12px;
+        margin:0px;
+         text-align: left;
+    }
+
+}
+
+
+.in img{
+    width: 60px;
+
+}
+.linkedin{
+    text-align: right;
+    position: relative;
+    right: 0px;
+}
+.linkedin img{
+    width: 50px;
+}
+
+.linkedin p{
+    font-size: 12px;
+}
+
+.in p{
+    font-size: 12px;
+}
+
+/* registro 5*/
+
+.firstClient{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.btn-anade-sol{
+    background: $colorbtoliva;
+    color:white;
+    font-weight: bold;
+    padding: 15px 24px;
+}
+
+.btn-default{
+    background: $colorbtoliva;
+      color:white;
+      font-weight: bold;
+      padding: 10px 15px;
+}
+
+.btn-default-disable {
+    background: $colorbdisable;
+    color: gray;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.container-fisrt{
+    margin-top:10px;
+    background: white;
+    padding: 20px 100px;
+}
+
+.container-editar-p {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+#btn-reg-d{
+    margin-right: 20px;
+}
+
+
+.navbar .dropdown-toggle, .navbar .dropdown-menu a {
+    cursor: pointer;
+}
+
+.navbar .dropdown-item.active, .navbar .dropdown-item:active {
+    color: inherit;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+.navbar .dropdown-item:focus, .navbar .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+.navbarthem{
+ background: white; 
+ height: 50px;  
+ padding-top: 15px;
+ transition: all 0.5s;
+}
+
+.navbar-brand{
+color:black;
+text-transform: uppercase;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+   transition: all 0.2s;
+  z-index:10000;
+  height: 60px;
+   
+}
+.space-header-left{
+    display: none;
+}
+
+.linknav{
+    color: black;
+    
+}
+
+.linknav:hover{
+   text-decoration: none;
+    
+}
+.content-header-sticky{
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 150px;
+ justify-content: center;
+  z-index:10000;
+  margin-left: -15px !important;
+  padding: 0px !important;
+	transition: all 0.2s;
+  
+ 	#cssmenu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px !important;
+  }
+ 
+  .logo-img,.menu-header{
+     padding: 20px;
+      margin-left: 20px !important;
+       margin-right: 20px !important;
+       width: auto !important;
+  }
+
+  .logo-img{
+      margin-left: 150px !important;
+      width: 240px !important;
+  }
+
+  .menu-header{
+      width: 60% !important;
+  }
+
+  .space-header-left{
+      display: block;
+    width:40px;
+    
+    
+}
+}
+
+ .nav-bar-cool {
+                    display: flex;
+                    justify-content: flex-end;
+                    position: relative;
+                    width: 100%;
+                }
+
+                /*MOVIL*/
+@media (min-width: 767px) {
+    /*.navbar .dropdown-toggle:not(.nav-link)::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: .5em;
+        vertical-align: 0;
+        border-bottom: .3em solid transparent;
+        border-top: .3em solid transparent;
+        border-left: .3em solid;
+    }*/
+}
+
+
+
+.side-img img {
+    width:100%;
+    height:100%;
+}
+
+/*Company show 4 views*/
+
+
+
+// registrar 4
+
+$ventanafront: #E6ECEF;
+$botonbluefront:#A8C9F6;
+$whitefront4:#FAFFFF;
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-30 { font-size: 30px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.navbar-top-menu{
+    width: 100%;
+    height: 50px;
+    background: white;
+    
+}
+
+
+  .content-header{
+        display: flex;
+        flex-wrap: wrap;
+        background: white;
+        width: 80%;
+        height:135px;  
+        margin: auto;
+        position: relative;
+        top:160px;
+
+
+    }
+
+    .logo-img{
+        width: 20%;
+        background: $bgheadermenu;
+        text-align: center;
+    }
+
+     .logo-img img{
+         margin-top: 20px;
+        width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+     }
+  .logo-img h3{
+      font-size: 18px;
+      
+  }
+    .menu-header{
+        width: 80%;
+    }
+
+    
+.navbar-top-menu{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid $colorbdisable;
+    padding-top: 5px;
+    
+    
+}
+
+
+.menu-navbar-nv{
+ text-align: center;
+}
+
+
+.menu-navbar-nv div i{
+
+}
+    .menu-navbar-nv{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+
+    .search{
+        position:relative;
+      width:50%;
+      margin-right: 20px;
+        form{
+            position: absolute;
+            right:    0px;
+        }
+    }
+
+
+
+    .menu-navbar-nv{
+        
+        display: flex;
+        justify-content: space-around;
+
+        .yoursolutions-nv,.register-nv,.help-nv,.login-nv{
+            width: 90px;
+        }
+    }
+
+/*navbar*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+#cssmenu {
+    background: rgba(255, 255, 255, 0);
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 25px;
+    padding: 0px 20px;
+}
+
+.behind {
+    background: white;
+    width: 100%;
+    height: 70px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.151);
+    margin-bottom: 80px;
+}
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    top: -65px;
+    border: 4px solid $bgcolor;
+}
+
+  .header-bar-white{
+        margin: auto;
+
+    }  
+    .container-conts{
+        display: flex;
+        justify-content: center;
+       
+
+    }  
+
+     .container-conts-header{
+     
+        justify-content: left;
+        margin-top: 20px;
+        display: none ;
+
+   
+
+    }  
+
+    .box-cont{
+        width: 120px;
+         margin-top: 10px;
+         
+    }
+    .cont-results{
+        text-align: center;
+
+        h3{
+            font-size:20px;
+            color:$bluetitle;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+    }
+
+      .cont-results0{
+        text-align: center;
+         color:gray;
+
+        h3{
+            font-size:20px;
+            color:$sociallinks;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+    }
+
+
+#cssmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: block;
+    zoom: 1;
+    margin-top: 5px;
+}
+
+#cssmenu ul:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#cssmenu ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#cssmenu.align-right ul li {
+    float: right;
+}
+
+#cssmenu.align-center ul {
+    text-align: center;
+}
+
+#cssmenu ul li a {
+    color: $bluelinkheadermenu;
+    text-decoration: none;
+    display: block;
+    padding: 22px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    -webkit-transition: color .25s;
+    -moz-transition: color .25s;
+    -ms-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
+}
+
+#cssmenu ul li a:hover {
+    color: #506775;
+}
+
+#cssmenu ul li a:hover:before {
+    width: 100%;
+}
+
+#cssmenu ul li a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -3px;
+    top: 19px;
+    height: 6px;
+    width: 6px;
+    background: #ffffff;
+    opacity: .5;
+}
+
+#cssmenu ul li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: $bluelinkheadermenu;
+    -webkit-transition: width .25s;
+    -moz-transition: width .25s;
+    -ms-transition: width .25s;
+    -o-transition: width .25s;
+    transition: width .25s;
+}
+
+#cssmenu ul li.last>a:after,
+#cssmenu ul li:last-child>a:after {
+    display: none;
+}
+
+#cssmenu ul li.active a {
+    color: $bluelinkheadermenu;
+}
+
+#cssmenu ul li.active a:before {
+    width: 100%;
+}
+
+#cssmenu.align-right li.last>a:after,
+#cssmenu.align-right li:last-child>a:after {
+    display: block;
+}
+
+#cssmenu.align-right li:first-child a:after {
+    display: none;
+}
+
+
+
+.navbar-container {
+    width: 80%;
+    margin: auto;
+   background: red;
+
+}
+
+.button-contactus {
+    background: $colorbtgreenn;
+    width: 150px;
+    height: 45px;
+    transition: all 0.4s;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+.navbar-container {
+    margin-top: 10px;
+}
+
+#titlenav {
+    margin-left: 150px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.container-body {
+    background: $bgcolor;
+    /*height: 100%;*/
+}
+
+
+
+.menu-left .spanmenuleft {
+    display: block;
+    padding-bottom: 5px;
+ 
+}
+
+.menu-left{
+       font-weight: bold;
+}
+
+.menu-left .spanmenuleft span {
+    float: right;
+}
+
+
+.rowb {
+    padding-top: 0px !important;
+    margin-top: -50px;
+}
+
+.m-title {
+    font-size: 20px;
+    padding: 10px 0px 20px 0px
+}
+
+.cont-sol-left {
+
+    margin: 5px 0px;
+    
+}
+
+.cont-sol-left  li.item-cont-sol::before {
+    content: "• ";
+    color: #048276;
+    font-size: 15px;
+    /* or whatever color you prefer */
+}
+
+.cont-sol-left .inside{
+padding-left: 20px;
+}
+
+.cont-sol-left .inside li::before {
+  content: "> ";
+    color: #048276;
+    font-size: 15px;
+    font-weight: bold !important;
+}
+
+
+.m-content {}
+
+
+.sol-title {
+    color: $bluetitle;
+    margin-bottom: 10px;
+}
+
+
+
+.logo-sol-item {
+    width: 30px;
+    height: 30px;
+}
+
+
+.footer-container-solution {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-fo-inside {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    margin: auto;
+    position: relative;
+    top: 0px;
+}
+
+
+
+
+
+.side-text {
+    padding: 50px 30px !important;
+}
+
+
+
+
+
+/* configuracion de menu-dere*/
+
+.content-social-left {
+    margin-top: 40px;
+}
+
+.content-social-left i {
+    font-size: 20px;
+}
+
+.social-left {
+    width: 100%;
+    margin: 0px !important;
+    padding: 0px;
+}
+
+.social-left li {
+    display: inline;
+    list-style: none;
+}
+
+.social-left a {
+    color: $sociallinks;
+    transition: all 0.4s;
+    margin-right: 4px;
+}
+
+.social-left a:hover {
+    color: black;
+}
+
+.social-left a {}
+
+.m-right .cont-sol-result li::before,.cont-sol-result li::before{
+    content: "• ";
+    color: #048276;
+    font-size: 15px;
+    /* or whatever color you prefer */
+}
+
+.m-content {
+    padding: none !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.m-right .cont-sol-left li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: initial;
+    color:black;
+    font-weight: bold;
+}
+
+.m-right .m-title ul li {
+    font-weight: bold;
+}
+
+.m-right .m-title {
+    color: #6c757d;
+}
+
+.menu-right {
+    /*width: 250px;*/
+}
+
+
+.button-contactus{
+margin-left: auto;
+ }
+
+ /*definiion de los titulos div*/
+ .menu-left-title{
+     background: white;
+     padding-left: 20px;
+     padding-top: 10px;
+     border-top: 4px solid $greentitleleft;
+     height: 53px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+   
+ }
+ .m-title,.menu-left-title h4, .menu-right-title h4,.menu-result-title h4,.menu-front-title h4{
+ font-size: 18px;
+
+ }
+
+ .menu-right-title{
+     background: white;
+     padding-left: 20px;
+     padding-top: 10px;
+     border-top: 4px solid $greentitleleft;
+     height: 53px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+   
+ }
+
+ .menu-result-title{
+     background: white;
+     padding-left: 20px;
+     padding-top: 10px;
+     border-top: 4px solid $orangetitleright;
+     height: 53px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+ }
+
+ .menu-front-title{
+     background: white;
+     text-align: center;
+     padding: 10px 0px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+     
+ }
+
+ .menu-front-resul{
+     background: white;
+  font-size: 180px;
+     padding: 10px;
+     width: 100%;
+     border-bottom:1px solid $colorbdisable;
+     h4{
+         font-size: 20px;
+     }
+
+     border-top: 25px solid $bgcolor;
+ }
+
+ 
+
+
+
+ /*footer*/
+
+    .social-foo li {
+    display: inline;
+    list-style: none;
+    
+}
+
+.content-foo{
+
+    margin-top: 8px;
+}
+
+.content-foo a:hover{
+ color:$colorsides;
+}
+
+.social-foo a {
+    color: $sociallinks;
+    transition: all 0.4s;
+    margin-right: 4px;
+    font-size: 25px;
+    border-radius: 20px !important;
+   transition: all 0.4s;
+}
+
+.social-foo a:hover{
+    color:$sociallinks !important;
+    text-decoration: none;
+}
+
+/* pagina registro solucion*/
+
+
+
+
+.hc-res{
+    margin-top: 5px;
+    font-size: 13px;
+    color:$colorsides;
+}
+.hc-res p{
+    white-space: nowrap;
+    font-weight: initial;
+}
+.hc-sol p{
+    border-bottom: 1px solid $colorsides;
+    padding-bottom: 4px;
+    font-weight: initial;
+     white-space: nowrap;
+}
+.hc-res span{
+font-weight: bold;
+}
+.hc-sol span{
+font-weight: bold;
+}
+
+
+
+.item-result-each-num{
+    font-weight: initial;
+    padding-top: 10px;
+}
+
+
+.container-imhappyclient .m-title-imnc{
+    font-size: 17px;
+
+    
+}
+.m-title-imnc img{
+    
+    display: none;
+}
+
+.userdefault img{
+    width: 70px;
+}
+
+.container-imhappyclient .buttonYellow{
+width: 100%;
+background: $colorbtyelow;
+color:$bgwhite;
+font-weight: bold;
+}
+
+
+
+
+.header-rsol{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-sol{
+    position: relative;
+}
+
+
+.cont-about{
+    font-weight: 600;
+    color:$colorsides;
+
+}
+
+.link{
+color:$colorlink;
+margin-left:25px;
+}
+
+/*
+.cont-sol-result p{
+    margin-left:15px;
+}*/
+
+body{
+    background: $bgcolor;
+    color: black;
+}
+.editarperfil{
+    background: white;
+}
+.client{
+    text-align: center;
+    width: 50%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.client .cont-cli{
+
+   
+    h4{
+        font-size:12px;
+          text-align: left;
+       
+    }
+
+    p{
+        font-size: 12px;
+        margin:0px;
+         text-align: left;
+    }
+
+}
+
+
+.in img{
+    width: 60px;
+
+}
+.linkedin{
+    text-align: right;
+    position: relative;
+    right: 0px;
+}
+.linkedin img{
+    width: 50px;
+}
+
+.linkedin p{
+    font-size: 12px;
+}
+
+.in p{
+    font-size: 12px;
+}
+
+/* registro 5*/
+
+.btn-anade-sol{
+    background: $botonbluefront;
+    color:white;
+    font-weight: bold;
+    padding: 15px 24px;
+}
+
+.btn-default{
+    background: $bluelinkheadermenu;
+      color:white;
+      font-weight: bold;
+      padding: 10px 15px;
+}
+
+.btn-default-disable {
+    background: $colorbdisable;
+    color: gray;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+
+.container-editar-p {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+#btn-reg-d{
+    margin-right: 20px;
+}
+
+.messagefirst{
+    margin-top: 20px;
+    font-size: 20px;
+   
+}
+
+
+.navbar .dropdown-toggle, .navbar .dropdown-menu a {
+    cursor: pointer;
+}
+
+.navbar .dropdown-item.active, .navbar .dropdown-item:active {
+    color: inherit;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+.navbar .dropdown-item:focus, .navbar .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+.navbarthem{
+ background: white; 
+ height: 50px;  
+ padding-top: 15px;
+ transition: all 0.5s;
+ border-bottom: 1px solid $colorbdisable;
+}
+
+.navbar-brand{
+color:black;
+text-transform: uppercase;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+   transition: all 0.2s;
+  z-index:10000;
+  height: 60px;
+   
+}
+.space-header-left{
+    display: none;
+}
+
+.linknav{
+    color: black;
+    
+}
+
+.linknav:hover{
+   text-decoration: none;
+    
+}
+.content-header-sticky{
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 150px;
+ 
+  z-index:10000;
+  margin-left: -15px !important;
+  padding: 0px !important;
+
+  
+  #cssmenu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px !important;
+  }
+ 
+  .logo-img,.menu-header{
+     padding: 20px;
+      margin-left: 20px !important;
+       margin-right: 20px !important;
+       width: auto !important;
+  }
+
+  .logo-img{
+      margin-left: 150px !important;
+      width: 240px !important;
+  }
+
+  .menu-header{
+      width: 60% !important;
+  }
+
+  .space-header-left{
+      display: block;
+    width:40px;
+    
+    
+}
+}
+
+ .nav-bar-cool {
+                    display: flex;
+                    justify-content: flex-end;
+                    position: relative;
+                    width: 100%;
+                }
+
+/* core code mobil*/
+
+
+
+
+@media (max-width: 768px) {
+
+    
+  
+    .search{
+        display: none;
+    }
+.navbarthem {
+
+    display: flex;
+    justify-content: space-around;
+}
+    .nav-bar-cool{
+        width: auto;
+    }
+
+    .nav-bar-cool a div{
+        width: 70px !important;
+    }
+
+     .nav-bar-cool a div p{
+         display: none;
+     }
+.menu-header{
+    width: 100%;
+    text-align: center;
+}
+header.container-fluid.header-sol {
+    overflow: hidden;
+}
+
+    .content-header {
+    width: 110%;
+    margin: 0px -15px;
+    position: initial;
+    height: 220px;
+}
+
+.button-contactus{
+    display: none !important;
+}
+
+.header-sol{
+    height: 100%;
+}
+
+.container-conts {
+    background: white}
+
+.logo-img{
+    width: 100%;
+    height: 120px;
+    text-align: initial;
+    display: flex;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c6c6c6+1,9b9b9b+100 */
+background: #c6c6c6; /* Old browsers */
+background: -moz-linear-gradient(top, #c6c6c6 1%, #9b9b9b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #c6c6c6 1%,#9b9b9b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #c6c6c6 1%,#9b9b9b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c6c6', endColorstr='#9b9b9b',GradientType=0 ); /* IE6-9 */
+}
+
+.logo-img img{
+margin-left: 40px;
+width: 100px;
+height: 100px;
+margin-top: 10px;
+}
+
+.logo-img .titlelogo{
+    margin-left: 15px;
+    margin-top: 35px;
+    color: white;
+}
+
+#cssmenu{
+    width: 90% !important;
+    text-align: center !important;
+}
+
+#cssmenu ul{
+    margin: auto;
+}
+
+#cssmenu a{
+    font-size: 20px !important;
+}
+
+.container-conts h3{
+font-size: 30px;
+}
+
+.colb {
+    margin-top: 30px;
+}
+
+.menu-front-title{
+    border-top: 4px solid $redtitle !important;
+    text-align: left;
+}
+
+.menu-front-title h4{
+    margin-left: 20px;
+}
+
+
+.m-right ul, .m-right .cont-sol-result, .results-sol ul {
+    width: 100%;}
+
+    
+
+.client .photoc{
+width: 80px !important;
+height: 80px !important;
+}
+
+footer.footer-page {
+    width: 100%;
+    height: auto;
+}
+
+.circle-container {
+    width: 80px !important;
+    height: 80px !important;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin: 50px;
+}
+
+}
+
+/*oerfil cada empresa*/
+
+.ihc{
+    border-top: 4px solid $greentitleleft !important;
+}
+
+
+.circle-cont-linkin{
+text-align: center;
+padding-top: 10px;
+}
+
+.is{
+ font-size: 15px !important;
+   }
+
+
+.blur{
+    filter: blur(1px);
+}
+
+.blur2{
+    filter: blur(2px);
+}
+
+.opacity{
+    opacity: 0.6;
+}
+
+.photoc .user{
+    position:relative;
+    display:block;
+    bottom:5px;
+    right:14px;
+
+    }
+
+
+
+.photoc{
+    overflow: hidden;
+
+}
+
+img.userl {
+    width:100%;
+    height:100%;    
+}
+
+/* cover config*/
+
+img.backgroundCover {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    padding-left:  0px;
+    margin-left:  0px;
+    z-index: -1;
+}
+
+.header-sol{
+    padding:0px !important;
+}
+
+/*input del registro*/
+
+.input-special {
+    display:flex;
+
+}
+
+.input-special p{
+    width:80%;
+        font-size: 1rem;
+}
+
+.input-special .i-call p{
+    font-size:12px;
+    width:100%;
+}
+
+/* color link head editor*/
+
+.container-edit-profile a{
+    color:#6a8aa7;
+}
+
+
+.titleurl {margin-top:10px;}
+
+.moduleyeahurl{
+
+    padding:15px
+}
+
+.moduleyeahurl .form-control{
+    
+    padding-bottom:0px;
+}
+
+
+
+
+
+/*code  mobil*/
+
+@media (max-width: 320px){
+
+    #cssmenu ul a{
+    width: 150px;
+    font-size: 12px !important;
+    
+  }
+
+}
+
+@media (max-width: 360px){
+
+    #cssmenu ul a{
+    width: 150px;
+    font-size: 12px !important;
+    
+  }
+}
+
+@media (max-width: 430px){
+
+    #cssmenu ul a{
+    width: 150px;
+    font-size: 12px !important;
+    
+  }
+}
+
+
+@media (max-width: 500px){
+ 
+.logo-img {
+   text-align: center !important;
+   display: block !important;
+   background: white !important;
+
+}
+
+  .logo-img img {
+    text-align: center !important;
+    margin-right: 0px !important;
+    width: 70px !important;
+    height: 70px !important;
+  margin-left: 0px;
+    margin-bottom: -20px;
+    position: relative;
+    top: -50px;
+    right: 20px;
+    border: 2px solid #d7e2e5;
+
+  }
+
+  .content-header{
+    margin-top: 100px !important;
+  }
+
+.logo-img .titlelogo {
+
+    margin-left: 15px !important;
+    margin-top: 35px !important;
+    font-size: 30px !important;
+    margin-right: 40px !important;
+    color: #194069 !important;
+    font-weight: bold !important;
+
+}
+
+.client .img-linked{
+top: 60px;
+right: 10px;
+}
+
+
+client .photoc {
+
+    width: 60px !important;
+    height: 60px !important;
+
+}
+
+i{
+    font-size: 25px;
+}
+
+
+
+}
+
+@media (max-width: 600px){}
+/*navbar settins*/   
+.titlenavbar{
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+    
+        .dropyeahthem{
+         left: -100px !important;
+        }
+
+        .searchyeahthem{
+         position: relative;
+         right: -80px !important;
+        }
+
+
+        @media (max-width: 900px){
+            .searchyeahthem{
+                position: initial;
+                right:initial;
+            }
+
+        }
+
+
+        /*focus input contact registrar nuevas compania*/
+
+.imputs-contact3:focus{
+    border-bottom: 2px solid #00c853;
+}
+.imputs-contact2:focus{
+    border-bottom: 2px solid #00c853;  
+}
+  
+
+  /* vistayour solutions new */
+
+  
+.container-buttons-editar-p {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
+  margin-top:30px;
+}
+
+.container-buttons-editar-p button{
+  
+  margin-bottom: 20px;
+  
+  
+}
+
+.circleyoursolutionnew{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #d5e2e3;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.btn-full-width{
+    width: 100%;
+}
+
+.special-icon{
+    margin-top: 1.5em;
+    border-radius: 50%;
+    background-color: #0087FF;
+    width: 47px;
+    height: 47px;
+    text-align: center;
+}
+.special-icon:hover{
+     background-color: #0087FF;
+}
+.responsive-texts-link{
+    display: none;
+    font-weight:bold;
+    font-size: 1em;
+    font-family: verdana, arial;
+}
+
+#know-links:hover{
+    color:#0087FF;
+}
+
+.m-title {
+  font-size: 16px !important;
+}
+
+/* color de letras pagina companies*/
+
+.titlenavbar{
+  font-size: 24px !important;
+  font-family: arial;
+  color: #1D2D35 !important;
+}
+
+.logo-img h3 {
+    font-size: 16px;
+  font-weight: bold !important;
+    color: #304251 !important;
+}
+
+.menu-header a{
+  font-size: 16px !important;
+  color:#4987FF !important;
+}
+
+.cont-results h3{
+  font-size: 17.67px !important;
+  color: #4987FF !important;
+}
+
+.cont-results p{
+  font-size: 13.64px !important;
+}
+
+.menu-left-title h4,.menu-right-title h4{
+  font-size: 16px !important;
+}
+
+.cont-sol-left ul{
+  font-size: 13.65px !important;
+    color: #1D2D35 !important;
+}
+
+
+.cont-sol-left li{
+  font-size: 14.08px !important;
+  
+}
+
+.cont-sol-result ul{
+  font-size: 14px !important;
+  color: #1D2D35 !important;
+}
+
+.cont-sol-result ul li{
+  font-size: 14px !important;
+    color: #1D2D35 !important;
+}
+
+.inside a{
+  font-size: 14.08px !important;
+   color: #1D2D35 !important;
+}
+
+.hc-sol p{
+  font-size: 11.18px !important;
+  color: #6F6F5F !important;
+}
+
+.hc-res p{
+  font-size: 11.19px !important;
+  color: #6F6F5F !important;
+ 
+}
+
+
+.content-foo a {
+  font-size:14.37px !important;
+}
+
+.sol-title{
+  font-size: 10px !important;
+  font-weight: bold;
+  color:#0030FF !important;
+}
+
+.side-text .content{
+  font-size: 15.98px !important;
+}
+
+.hc-sol p i{
+  font-size: 13px !important;
+}
+
+.cont-cli p{
+  font-size: 11.14px !important;
+  
+}
+
+.circle-cont-linkin{
+  font-size: 16px !important;
+}
+
+.linkedin{
+  font-size: 9.29px !important;
+}
+
+.menu-result-title h4{
+  font-size: 16px !important;
+}
+
+.menu-left{
+  color: #1D2D35 !important;
+}
+
+
+/* letras y colores paginas editar*/
+
+.bar-exit-editor p{
+  font-size: 16px !important;
+}
+
+.container-edit-profile a{
+  font-size: 18px !important;
+}
+
+.container-page-title h2{
+  font-size: 34px !important;
+  font-weight: bold;
+  color:#052D49;
+}
+
+.container-page-title p{
+  font-size: 16px !important;
+color:#052D49;
+}
+
+.process-list p{
+  font-size: 16px !important;
+  color:#052D49;
+}
+
+.process-list{
+  font-size: 16px !important;
+}
+
+.process-list ul .true{
+  font-size:16px !important;
+  color:#63D6A3;
+}
+
+.process-list ul .false{
+  font-size:16px !important;
+  color:#D13D3D;
+}
+
+.labeltext label{
+  color: #052D49;
+  font-size: 16px !important;
+}
+
+.labeltext p{
+  color: #052D49;
+  font-size: 13px !important;
+}
+
+.i-call input:focus,.container-input input:focus{
+        border-bottom: 2px solid #00c853 !important;
+        }
+
+.registerSave{
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+.container-input p{
+  font-size: 13px !important;
+  color: #052D49;
+}
+
+.container-r-item{
+   color: #052D49;
+  font-size:17px !important;
+}
+
+.titleurl h3{
+  color:#052D49;
+  font-size: 16px !important;
+}
+
+.url-com p{
+  font-size: 16.99px !important;
+  color: #A4ABB3
+}
+
+.url-com input:focus{
+    border-bottom: 2px solid #00c853 !important;
+}
+
+
+.contact-us-mobil{
+  text-align: center;
+}
+
+.container-input .input{
+    width: 340px;
+}
+
+.details-windows{
+    display: none;
+}
+
+.finalClient{
+    display: none;
+  margin-bottom: 50px;
+}
+
+
+.content-foo{
+  margin-bottom: 10px !important;
+}

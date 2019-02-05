@@ -1,0 +1,160 @@
+<div class="bar-exit-editor">
+     <%= link_to your_solutions_company_path(1), class:'exit-link' do %>
+        <p> <i class="fa fa-arrow-left"></i> Exit Editor</p>
+    <%end%>
+</div>
+
+<header class="header-editor-profile">
+        
+    <div class="container-edit-profile">
+        <ul>
+            <%= link_to edit_company_path(1) do %>
+                <li>About</li>
+            <%end%>
+            <%= link_to preview_new_solution_path(1) do %>
+                <li>Solutions</li>
+            <%end%>
+            <%= link_to happyclients_solution_path(1) do %>
+                <li>Happy Clients</li>
+            <%end%>
+            <%= link_to thanks_message_company_path(1) do %>
+                <li>Thanks</li>
+            <%end%>
+        </ul>
+    </div>
+    <div class="container-launch-page">
+        <button class="btn btn-default hvr-glow" style="cursor: none; pointer-events: none; padding: 15px 15px;">LANZA TU PÁGINA</button>
+    </div>
+
+
+    <div class="container-page-title">
+        <h2>Happy Clients</h2>
+        <p>Demuestra el apoyo de los clientes a los que ya haz ayudado</p>
+    </div>
+    </header>
+
+<div class="container-body-form container">
+
+    <div class="row">
+        
+        <div class="col-lg-8 col-sm-12 col-form-cont">
+            
+            <div class="container-window container-fluid">
+                <h6 class="text-primary">
+                    Recibe el apoyo de tus clients
+                </h6>
+                <p style="font-size: 1em">
+                    La validaciñon de terceros es lo que un cliente potencial necesita para decidir sobre qué producto o servicio adquirir
+                </p>
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <div class="circle-num">
+                            <p>1</p>
+                        </div>
+                        <div class="top-space">
+                            <h6>Envia el link de tu solución</h6>
+                            <p class="text-secondary">
+                                La validaciñon de terceros es lo que un cliente potencial necesita para decidir sobre qué producto o servicio adquirir
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="circle-num" style="background-color: #039BE5;">
+                            <p>2</p>
+                        </div>
+                        <div class="top-space">
+                            <h6>Recibe apoyos</h6>
+                            <p class="text-secondary">La validaciñon de terceros es lo que un cliente potencial necesita para decidir sobre qué producto o servicio adquirir</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 ">
+                        <div class="circle-num" style="background-color: #e53935;">
+                            <p>3</p>
+                        </div>
+                        <div class="top-space">
+                            <h6 >Muestra tus Happy Clients</h6>
+                            <p class="text-secondary">La validaciñon de terceros es lo que un cliente potencial necesita para decidir sobre qué producto o servicio adquirir</p>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="text-primary top-space">
+                       Tus soluciones
+                </h6>
+                <div class="row" style="margin-top: 10px;">
+                        <div class="col-sm-3">
+                            <h6>Solución 1 Link</h6>
+                        </div>
+                        <div class="col-sm-9">
+                            <h6 class="text-secondary">
+                                <%= request.original_url.gsub("/share", "")%> 
+                                <input type="hidden" id="url" value="<%= request.original_url.gsub("/share", "")%>">
+                                <button id="cp-action" class="btn-simply">
+                                    <span style="color: #000; margin-left:1em;">
+                                        <i class="fa fa-copy" style="display: inline;"></i>
+                                        <p style="display: inline;">Copy Link</p>
+                                    </span>
+                                </button>
+                                <span id="cp-msg"><small>link copiado</small></span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-sm-3">
+                            <h6>Solución 2 Link</h6>
+                        </div>
+                        <div class="col-sm-9">
+                            <h6 class="text-secondary">
+                                <%= request.original_url.gsub("/share", "")%> 
+                                <input type="hidden" id="url" value="<%= request.original_url.gsub("/share", "")%>">
+                                <button id="cp-action" class="btn-simply">
+                                    <span style="color: #000; margin-left:1em;">
+                                    <i class="fa fa-copy" style="display: inline;"></i>
+                                    <p style="display: inline;">Copy Link</p>
+                                    </span>
+                                </button>
+                                <!--OJOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo no hace nada -->
+                                <span id="cp-msg"><small>link copiado</small></span>
+                            </h6>
+                        </div>
+                    </div>
+            </div>
+
+      
+ <div class="container-window no-space-window-up">
+
+                <div class="button-center">
+                    <button class="btn btn-anade-otra-sol hvr-glow">     AÑADE OTRA SOLUCIÓN</button>
+
+                </div>
+                
+         
+            </div>
+
+
+      
+        </div>
+
+
+        
+        <div class="col-lg-4 col-sm-12 col-form-progress">
+   <div class="container-window processpart">
+                <div class="left-space">
+                    <div class="circle-p"></div>
+                </div>
+                <div class="process-list">
+                    <p>Tu checklist antes de lanzar:</p>
+
+                    <ul>
+                        <li class="true" ><i class="fa fa-check"></i> Nombre comercial</li>
+                        <li class="true" ><i class="fa fa-check"></i>Especialización</li>
+                        <li class="true" ><i class="fa fa-check"></i>Imagen de portada</li>
+                        <li class="true" ><i class="fa fa-check"></i>Tus soluciones</li>
+                        <li class="true" ><i class="fa fa-check"></i>Tus resultados</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+</div>    

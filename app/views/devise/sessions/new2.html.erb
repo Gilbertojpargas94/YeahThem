@@ -1,0 +1,63 @@
+
+<div id="login-container">
+  <fieldset>
+    <div class="col-md-6 offset-md-3" id="alert-email"></div>
+    <div class="login-page">
+      <div class="form text-center" id="form-login">
+        <h3 class="sign-in" style="color: #41968A";>Ingresa y muestra tu trabajo</h3>
+        <div class="top-space">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span id="addon-email" class="input-group-text"><i class="far fa-user fa" aria-hidden="true"></i></span>
+              </div>
+              <input id="log-email" style="border-color: #41968A;" type="email" class="form-control custom-green border-green" placeholder="Email ">
+            </div>
+          <button id="btn-email" class="next top-space white-text">Continuar</button>
+          <div class="top-space">
+            <p id="p-line" class="message">¿Nuevo en Partner Good?</p>
+          </div>
+          <br>
+          <p class="message"><%= link_to "Registrate", info_path, class:"btn btn-light shadow-style btn-register"%></p>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="login-page">
+        <div class="form text-center" id="form-login">
+          <h3 class=" sign-in custom-green">Bienvenido</h3>
+          <p class="message" id="email_val"></p>
+          <%= f.hidden_field :email, id:"email_hidden" %>
+          <div class="top-space" >
+              <div class="input-group top-space">
+                <div class="input-group-prepend">
+                  <span id="addon-lock" class="input-group-text"><i class="far fa-lock fa" aria-hidden="true"></i></span>
+                </div>
+                <%= f.password_field :password, autocomplete: "off", class:"form-control custom-green", placeholder:"password", style:"border-color: #41968A;", id:"log-password" %>
+              </div>
+              <br>
+              <% if devise_mapping.rememberable? -%>
+                <div class="text-left remember">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label "Recuerdame", class:"custom-green" %>
+                </div>
+              <% end -%>
+            <div class="actions w-100">
+              <button class="top-space" id="btn-ingresar" ><%= f.submit "Ingresar", class:"remove-submit-btn-style white-text " %></button>
+            </div>
+            <div class="top-space">
+              <p id="p-line" class="message">¿Nuevo en Partner Good?</p>
+            </div>
+            <br>
+            <p class="message"><%=link_to "Volver", new_user_session_path %> - <%= link_to "Registrate", new_user_registration_path, class:"message-link"%></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </fieldset>
+</div>
+<div class="margin-footer-log">
+  <%= render 'partials/footer' %>
+</div>

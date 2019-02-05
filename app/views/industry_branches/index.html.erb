@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Categorias</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Industria</th>
+      <th>Nombre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @industry_branches.each do |industry_branch| %>
+      <tr>
+        <td><%= industry_branch.industry.name %></td>
+        <td><%= industry_branch.name %></td>
+        <td><%= link_to 'Ver', industry_branch %></td>
+        <td><%= link_to 'Editar', edit_industry_branch_path(industry_branch) %></td>
+        <td><%= link_to 'Eliminar', industry_branch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Agregar Categorias', new_industry_branch_path %>

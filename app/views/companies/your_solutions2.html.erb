@@ -1,0 +1,66 @@
+<main class="main-company_solution" style="margin-top: -1%">
+  <p class="text-secondary">Sólo tu puedes ver este menu</p>
+  <div class="row" style="margin-bottom: 2%">
+    <div class="col-6 col-sm-5 col-md-4 col-xl-3"  id="folders" style="color: #11625B">
+      <div class="row">
+        <div class="col-1"><i class="material-icons" style="border-left: 2px solid #11625B">settings</i></div>
+        <div class="col-9">
+          <%= link_to  "Mis soluciones", your_solutions_company_path(current_user.company), class:"text-secondary my-solutionss", style:"text-decoration: none;" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-6  col-sm-4 col-xl-3" style="margin-left: -12%;color: #B4BABA">
+      <div class="row">
+        <div class="col-1"><i class="material-icons" >assignment</i></div>
+        <div class="col-9"> 
+          <%= link_to  "Solución", new_solution_path, class:"text-secondary solutionss", style:"text-decoration: none;" %> <%= (@solutions.size) + 1 %>  
+        </div>
+      </div>    
+    </div>
+  </div>
+  <p id="notice"><%= notice %></p>
+  <div class="row" id="container-new-solutions">
+    <%= render 'aside-information', comapny: @company %> 
+    <section class="col-sm-6 col-lg-8 col-xl-9" id="show-solutions">
+      <div class="row">
+          <p class="title-solution-short">Soluciones</p>
+      </div>
+      <div class="row" id="row-cards-company">
+      	<% x = (5 - @solutions.size) %>
+        <% contador = 1 %>
+         <% @solutions.each_with_index do |sol, index| %>
+          <div class="col-sm-12  col-lg-6 col-xl-4 multiple-cards">
+            <%= render 'solutions/solution', solution: sol, contador: index + 1, edit: true %> 
+            <% contador+=1 %>
+          </div>
+        <% end %>
+    		<% if x > 0 %>
+    			<% for i in 1..x %>
+          <%= link_to new_solution_path, class: "col-sm-12  col-lg-6 col-xl-4 multiple-cards links-new-solutions",
+          style:"text-decoration: none; color: #000;" do %>
+    					<%= render 'partials/solutions_nill', company: @company, contador: contador  %>
+              <% contador+=1 %>
+          <%end%>
+    			<%end%>
+    		<%end%>
+        <div class="col-sm-12  col-lg-6 col-xl-4 multiple-cards" id="load_card"> 
+          <div class="card" id="card" style="min-height: 400px;padding-top: 40%; text-align: center; color: #B2BBC1;cursor: pointer;">
+            <div class="card-body" id="card-body">
+              <div class="row">
+                <i class="material-icons md-48 " style="margin:auto;">note_add</i>
+              </div>
+              <div class="row" >
+                <h3 style="margin:auto;">Añadir Solución</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   
+    </section>
+  </div>
+</main>
+<script type="text/javascript">
+  $( "#load_card" ).click(function() {
+    $('<%= link_to new_solution_path, style:"text-decoration: none; color: #000;", class: "col-sm-12  col-lg-6 col-xl-4 multiple-cards links-new-solutions" do %><%= escape_javascript(render 'partials/solutions_nill', contador: contador,  company: @company) %><%contador+=1 %> <%end%>').insertBefore( $( "#load_card" ) );
+  });
+</script>

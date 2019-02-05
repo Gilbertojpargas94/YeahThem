@@ -1,0 +1,116 @@
+<article class="w-100 clients-solutions">
+  <div class="row">
+    <% if edit %>
+      <p class="col-2 col-md-1" data-toggle="tooltip" title="Añade a un Cliente" id="share-edit-link" style="display: inline-block;">
+        <%= link_to share_solution_path, id:"share-href",remote: true do %>
+          <span style="font-size: 1.5em;"><i class="fa fa-plus"></i></span>
+        <%end%>
+      </p>
+    <% end %>
+    <div class="col-4 col-md-4" >
+      <p class="subtitulo-company_solution" style="font-family: Segoe UI; font-size: 1rem;">Clientes</p>
+    </div>
+    <div class="col">                  
+    </div>
+  </div>
+  <div class="row">
+    <% if @clients.size  > 0 %>
+      <% @clients.each_with_index do |client, i| %>
+        <% if i < num %>
+          <div class="col-sm-10 col-lg-6 col-xl-4" style="padding-right: 3%;">
+            <div class="clints-company row">
+              <div class="col-3" style="padding-right: 0px;">
+                <% if client.image_url.nil? %>
+                  <%= image_tag "missing_client.png", class: "img-clientes-solutions" %>
+                <% else %>
+                  <%= image_tag client.image_url, class:"img-clientes-solutions"%>
+                <% end %>
+              </div>
+              <div class="container-clients-solution col" style="padding-right: 0px;
+  padding-left: 10px;">
+                <p class="p-solution_company" style="font-weight: bold; color: black;" ><%= client.name %> <%= client.last_name %></p>
+                <p class="p-solution_company" style="color: black;"><%= client.company_name %></p>
+                <p class="p-solution_company" style="font-weight: bold; color: black;"><%= client.title %></p>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <%next%>
+        <%end%>
+      <%end%>
+    <%else%>
+     <div class="col-sm-10 col-lg-6 col-xl-4" style="padding-right: 3%;" >
+        <div class="clints-company row" >
+          <div class="col-3" style="padding-right: 0px;">
+          <%= image_tag "head_2.png", class: "img-clientes-solutions" %>
+          </div>
+          <div class="container-clients-solution col" style="padding-right: 0px;
+  padding-left: 10px;">
+            <p class="p-solution_company" style="font-weight: bold; color: black;" >José Mendez</p>
+            <p class="p-solution_company" style="color: black;">SONY</p>
+            <p class="p-solution_company" style="font-weight: bold; color: black;">Consultor SAP (BI)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-10 col-lg-6 col-xl-4" style="padding-right: 3%;">
+        <div class="clints-company row">
+          <div class="col-3" style="padding-right: 0px;">
+            <%= image_tag "head_3.png", class: "img-clientes-solutions" %>
+          </div>
+          <div class="container-clients-solution col" style="padding-right: 0px;
+  padding-left: 10px;">
+            <p class="p-solution_company" style="font-weight: bold; color: black;" >Raul Vasquez</p>
+            <p class="p-solution_company" style="color: black;">ADIDAS</p>
+            <p class="p-solution_company" style="font-weight: bold; color: black;">Consultor SAP (BI)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-10 col-lg-6 col-xl-4" style="padding-right: 3%;">
+        <div class="clints-company row">
+          <div class="col-3" style="padding-right: 0px;">
+            <%= image_tag "head_3.png", class: "img-clientes-solutions" %>
+          </div>
+          <div class="container-clients-solution col" style="padding-right: 0px;
+  padding-left: 10px;">
+            <p class="p-solution_company" style="font-weight: bold; color: black;" >Raul Vasquez</p>
+            <p class="p-solution_company" style="color: black;">ADIDAS</p>
+            <p class="p-solution_company" style="font-weight: bold; color: black;">Consultor SAP (BI)</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% if @clients.size >= num %>
+  <div id="myDIV">
+    <div class="row">
+      <% @clients.each_with_index do |client, i| %>
+        <% if i < num %>
+          <%next%>
+        <% else %>
+          <div class="col-sm-10 col-lg-6 col-xl-4" style="padding-right: 3%;">
+            <div class="clints-company row">
+              <div class="col-3" style="padding-right: 0px;">
+                <% if client.image_url.nil? %>
+                  <%= image_tag "missing_client.png", class: "img-clientes-solutions" %>
+                <% else %>
+                  <%= image_tag client.image_url, class: "img-clientes-solutions" %>
+                <% end %>
+              </div>
+              <div class="container-clients-solution col" style="padding-right: 0px;
+  padding-left: 10px;">
+                <p class="p-solution_company" style="font-weight: bold; color: black;" ><%= client.name %> <%= client.last_name %></p>
+                <p class="p-solution_company" style="color: black;"><%= client.company_name %></p>
+                <p class="p-solution_company" style="font-weight: bold; color: black;"><%= client.title %></p>
+              </div>
+            </div>
+          </div>
+        <%end%>
+      <%end%>
+    </div>
+  </div>
+    <div class="row" style="cursor: pointer;" onclick="myFunction()">
+      <div class="col-6"><p id="see-more">Ver mas</p></div>
+      <div class="col-5"><i class="material-icons"  id="myii"> keyboard_arrow_down</i> <i class="material-icons" id="myi"s>keyboard_arrow_up</i></div>     
+    </div>
+  <%end%>
+</article>

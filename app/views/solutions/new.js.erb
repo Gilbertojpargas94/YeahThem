@@ -1,0 +1,18 @@
+$('<%= j render "formmodal" %>').on('shown.bs.modal', function (e) {
+	$('#up_picture').change(function() {
+		$('#lbl_picture').text("Archivo cargado").addClass("text-success")
+	})
+
+	// For hide the collection select and the plus(+) button to add a branch"
+	$('#l_associa').click(function(){
+		$(this).css("display", "none").fadeOut(1500);
+		$('#b_collection_select').css("display", "none");
+		$('#lbl_cate').css("display", "none");
+		$('#cocoon_form').removeClass("col-2 top-space").addClass("col-6");
+	});
+
+	$(this).on('hidden.bs.modal', function(e){
+		$(this).remove();
+		$('.modal-backdrop').remove();
+	});
+}).modal(); 

@@ -1,0 +1,104 @@
+<div class="modal fade" id="share-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Selecciona los resultados que te ayudaron</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="content-model">
+        <!-- item -->
+            <div class="content-item">
+                <div class="button-modal">
+                  <i class="fa fa-plus plus-item"></i>
+                </div>
+                <div class="item-modal">
+                    <li>One project document controller</li>
+                </div> 
+                <div class="content-information">
+                      <p>
+                        <i class="material-icons is">sentiment_very_satisfied</i> 
+                        <span style="font-weight: bold;" >4 Happy Clients </span> 
+                        con este resultado
+                    </p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="button-modal">
+                  <i class="fa fa-plus plus-item"></i>
+                </div>
+                <div class="item-modal">
+                    <li>One project document controller</li>
+                </div> 
+                <div class="content-information">
+                      <p>
+                        <i class="material-icons is">sentiment_very_satisfied</i> 
+                        <span style="font-weight: bold;">4 Happy Clients </span> 
+                        con este resultado
+                    </p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="button-modal">
+                  <i class="fa fa-plus plus-item"></i>
+                </div>
+                <div class="item-modal">
+                    <li>One project document controller</li>
+                </div> 
+                <div class="content-information">
+                      <p>
+                        <i class="material-icons is">sentiment_very_satisfied</i> 
+                        <span style="font-weight: bold;">4 Happy Clients </span> 
+                        con este resultado
+                    </p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="button-modal">
+                  <i class="fa fa-plus plus-item"></i>
+                </div>
+                <div class="item-modal">
+                    <li>One project document controller</li>
+                </div> 
+                <div class="content-information">
+                      <p>
+                        <i class="material-icons is">sentiment_very_satisfied</i> 
+                        <span style="font-weight: bold;">4 Happy Clients </span> 
+                        con este resultado
+                    </p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="button-modal">
+                  <i class="fa fa-plus plus-item"></i>
+                </div>
+                <div class="item-modal">
+                    <li>One project document controller</li>
+                </div> 
+                <div class="content-information">
+                      <p>
+                        <i class="material-icons is">sentiment_very_satisfied</i> 
+                        <span style="font-weight: bold;">4 Happy Clients </span> 
+                        con este resultado
+                    </p>
+                </div>
+            </div>
+             <div style="text-align: center;padding-top: 20px;" class="w-100">
+                    <span style="cursor: pointer;" onclick="showmore2()">
+                        <span id="show-more-happyclients" class="resultes">Mostrar más</span>
+                        <i id="down2" class="fa fa-chevron-down resultes" aria-hidden="true"></i>
+                        <i id="up2" style="display: none;" class="fa fa-chevron-up resultes" aria-hidden="true"></i>
+                  </span>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= link_to  thanks_solution_path, remote: true do %>
+          <button type="button" id="btn-dimiss" class="btn hvr-glow" style="background-color: #6FC23D">Guardar</button>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="modal fade" id="business-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <div class="row">
+          <h6 class="modal-title col-8 animated slideInDown delay-5s" id="exampleModalLongTitle" style="font-size: 1em;">Desarrollo de Negocio / Marketing</h6>
+          <h6 class="modal-title col-4 animated slideInDown delay-5s" style="font-size: 0.9em;">Madrid, España</h6>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body animated slideInDown delay-3s" style="padding: 0px;">
+        <div style="padding: 30px 30px 5px 30px;"> 
+          <h6>Responsabilidades</h6>
+          <p class="team-modal-p">Reclutar clientes para la plataforma por tierra, mar y aire</p>
+          <p class="team-modal-p">Usar cualquier herramienta disponible (teléfono, mail, visitas comerciales, etc) para captar potenciales clientes </p>
+          <p class="team-modal-p">Realizar campañas de marketing digital de generación de leads. Crear contenido de calidad explicando que hacemos y como lo hacemos</p>
+          <p class="team-modal-p">Contribuir de manera decisiva a crear la cultura de merchandising y construir nuevos procesos de ventas y marketing</p>
+          <h6>Requisitos</h6>
+          <p class="team-modal-p">Eres una persona llena de energía, con ganas de conseguir las cosas, confianza y ambición.</p>
+          <p class="team-modal-p">Entre trabajar en Facebook y emprender, escogerias la otra sin dudarlo </p>
+          <p class="team-modal-p" style="margin-bottom: 2px;">Tus amigos te definen como buena gente</p>
+        </div>
+        <div class="light-grey-bg" style="padding: 30px 0px;">
+          <div class="container">
+            <h6 style="padding-left: 0.825em;">Me Interesa</h6>
+            <%= form_tag(send_business_email_path, method: :post, remote: true, html: {id: "busi-form"}) do %>
+              <div class="form-group">
+                <label for="colFormLabel" class="col-12 col-form-label labels-contact">Nombre *</label>
+                <div class="col-sm-12">
+                  <%= text_field_tag 'name', nil, class: 'animated slideInDown delay-5s modal-input w-100 min-top-space', :required => true, id: "inputName"  %>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="colFormLabel" class="col-12 col-form-label labels-contact">Email *</label>
+                <div class="col-sm-12">
+                  <%= email_field_tag 'email', nil, class: 'animated slideInDown delay-5s modal-input w-100 min-top-space', :required => true, id: "inputEmail" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="colFormLabel" class="col-12 col-form-label labels-contact">Teléfono *</label>
+                <div class="col-sm-12">
+                  <%= text_field_tag 'phone_number',nil, class: 'w-100 animated slideInDown delay-5s modal-input min-top-space', :required => true,  pattern: "^[0-9-+ ()]*$", id: "inputTel"  %>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="colFormLabel" class="col-12 col-form-label labels-contact">Linkedin, Twitter, RRSS</label>
+                <div class="col-sm-12">
+                  <%= text_field_tag 'ltr',nil, class: 'w-100 animated slideInDown delay-5s modal-input min-top-space'  %>
+                </div>
+              </div>
+              <div class="row">
+                <%= submit_tag 'Enviar', class:"button-degree bg-success-custom animated slideInDown delay-5s bottom-space", style:"margin-left: 1.8em;", id:"boton" %>
+              </div>
+            <%end%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

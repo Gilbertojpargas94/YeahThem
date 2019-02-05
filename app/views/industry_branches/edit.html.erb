@@ -1,0 +1,6 @@
+<h1>Editar una categoria de <%= @industry_branch.industry.name %></h1>
+
+<%= render 'form', industry_branch: @industry_branch %>
+
+<%= link_to 'Ver', @industry_branch %> |
+<%= link_to 'Volver', industry_branches_path %>

@@ -1,0 +1,79 @@
+<header class="header" style="box-shadow:0 0 8px 0 rgba(0,0,0,.3) !important;">
+	<nav class="navbar navbar-expand-lg navbar-dark" id="navbar-home2">
+		<div class="row homepage">
+		  	<%= link_to root_path, class: 'col-3 col-lg-1 c img-header' do %>
+				 <%= image_tag "Logo4.png" %>
+		    <% end %>
+		  	<%= link_to root_path, class: 'title-home2 col' do %>
+				<h4 class="title" style="color: #1d2d35">YEAH THEM</h4>
+		    <% end %>
+    	</div>
+    	<div class="row header-effect-show w-75" id="not-show-another-links" style="z-index: 10; max-height: 38px;padding-top: 8px;">
+			<div style="padding-left: 4%; width: fit-content;">
+				<%= link_to root_path, class: 'links text-dark' do%>
+				<p class="link-homepage <%= home_state %>">
+					Página principal
+				</p>
+				<%end%>
+			</div>
+			<div style="padding-left: 2%; width: fit-content;">
+				<%= link_to jobs_path, class: 'links text-dark' do%>
+				<p class="link-homepage <%= team_state %>">
+					Únete al equipo
+				</p>
+				<%end%>
+			</div>
+		</div>
+  	<button class="navbar-toggler bg-primary" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" ></span>
+  	</button>
+  	<div class="collapse navbar-collapse links-home" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-auto" id="navbar-nav-home">
+	    	<div id="show-another-links">
+	    		<li class="nav-item">
+		          	<%= link_to root_path, class: 'nav-link text-dark', id: 'nav-link2', style: 'border-radius: 5px; ' do %> 
+		              <h6 class="<%= home_state %>" style="margin: 5px 3px 5px 3px;border-bottom: 0px;">Página Principal</h6>
+		          <% end %>
+	      		</li>
+	      		<li class="nav-item">
+		          	<%= link_to jobs_path, class: 'nav-link text-dark', id: 'nav-link2', style: 'border-radius: 5px; ' do %> 
+		              <h6 class="<%= team_state %>" style="margin: 5px 3px 5px 3px;border-bottom: 0px;">Únete al equipo</h6>
+		          <% end %>
+	      		</li>
+	    	</div>
+	    	<li class="nav-item speacil-link">
+			    <% if user_signed_in? %>
+	          		<%= link_to destroy_user_session_path,  method: :delete, class: 'nav-link bg-light text-primary', id: 'nav-link2-transparent'  do %> 
+	            		<h6 style="margin:7px 14px 7px 14px;">SALIR</h6> 
+	          		<% end %>
+	        	<% else %>
+	          		<%= link_to new_user_session_path, class: 'nav-link bg-light-custom text-primary', id: 'nav-link2-transparent' do %> 
+	            		<h6 style=" margin: 7px 14px 7px 14px;">ACCEDER</h6>   
+	          		<% end %>
+	        	<% end %>
+	        </li>
+	    	<li class="nav-item">
+					<%= link_to new_user_registration_path, class: 'nav-link bg-success-custom  text-white', id: 'nav-link2' do %> 
+						<h6 id="btn-header" style="color: white; font-size: 14px;">COMENZAR AHORA</h6>
+					<% end %>
+				</li>
+	    </ul>
+  	</div>
+	</nav>
+	<div class="row" id="not-show-another-links" style="z-index: 10; max-height: 38px;">
+		<div style="padding-left: 4%; width: fit-content;">
+			<%= link_to root_path, class: 'links text-dark' do%>
+			<p class="link-homepage <%= home_state %>">
+				Página principal
+			</p>
+			<%end%>
+		</div>
+		<div style="padding-left: 2%; width: fit-content;">
+			<%= link_to jobs_path, class: 'links text-dark' do%>
+			<p class="link-homepage <%= team_state %>">
+				Únete al equipo
+			</p>
+			<%end%>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,123 @@
+<%= render 'partials/navbar' %>
+<div id="login-container">
+  <fieldset id="number_one" class="container-fluid" style="padding-top: 50px;">
+    <div class="row">
+      <div class="col-sm-1 col-lg-2"></div>
+      <div class="col-sm-10 col-lg-8">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-10 col-sm-9">
+              <%= render 'partials/stepform', {one:"default", two:"current", three:"default"}%>
+            </div>
+            <div class="col-md-2 col-sm-3" id="not-responsive" >
+              <div class="container-fluid">
+                <div class="row" style="height:67px;">
+                  <div class="col-sm-5 arrows-signup" style="opacity: 0.3;">
+                    <i class=" fa fa-arrow-left fa-lg" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-sm-5 next arrows-signup" style="cursor:pointer;margin-right:0px">
+                    <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                  </div>
+                </div>  
+              </div>               
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1 col-lg-2"></div>
+    </div>
+    <div class="row" id="alert-email">  
+    </div>
+    <div class="login-page row">
+      <div class="col-sm-1 col-lg-2"></div>
+      <div class="form col-sm-10 col-lg-8" id="form-login">
+        <dir class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 col-lg-8">
+              <h6 class="sign-in">¡Hola!¿Comó se llama tu empresa?</h6>
+              <div class="top-space">
+                <article style="margin-bottom: 0.7em;">
+                  <i class="fa fa-home" aria-hidden="true" style="display: inline;color: #053E59;"></i>
+                  <p style="display: inline;font-weight: bold;color: #053E59;">Nombre Comercial</p>
+                </article>
+                <input id="log-email" type="text" class="imputs-contact3 w-100">
+                <button id="btn-email" class="next w-100 top-space white-text">OK</button>
+                <br>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="text-center content-bulb">
+                <i class="fa fa-lightbulb-o" id="bulb" aria-hidden="true"></i>
+                <p class="text-forthe-bulb">Siempre puedes cambiar esto después</p>
+              </div>
+            </div>
+          </div>
+        </dir>
+      </div>
+      <div class="col-sm-1 col-lg-2"></div>
+    </div>
+  </fieldset>
+
+  <fieldset id="number_second" class="container-fluid" style="padding-top: 50px;">
+    <div class="row">
+      <div class="col-sm-1 col-lg-2"></div>
+      <div class="col-sm-10 col-lg-8">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-10 col-sm-9">
+              <%= render 'partials/stepform', {one:"default", two:"default", three:"current"}%>
+            </div>
+            <div class="col-md-2 col-sm-3" id="not-responsive" >
+              <div class="container-fluid">
+                <div class="row" style="height:67px;">
+                  <div class="col-sm-5 arrows-signup" id="back" style="cursor:pointer;">
+                    <i class=" fa fa-arrow-left fa-lg" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-sm-5 next arrows-signup" style="opacity: 0.3;margin-right:0px">
+                    <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                  </div>
+                </div>  
+              </div>               
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1 col-lg-2"></div>
+    </div>
+    <div class="row" id="alert-email">  
+    </div>
+    <div class="login-page row">
+      <div class="col-sm-1 col-lg-2"></div>
+      <div class="form col-sm-10 col-lg-8" id="form-login">
+        <dir class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 col-lg-8">
+              <%= form_with(model: company, local: true) do |f| %>
+                <h6 class="sign-in">Elige tu categoría. Esto te ayudara a que los clientes te encuentren cuando estén buscando una empresa como la tuya</h6>
+                <p class="message" id="email_val" style="display: none;"></p>
+                <%= f.hidden_field :name, id:"email_hidden" %>
+                <div class="top-space">
+                  <article style="margin-bottom: 0.7em;">
+                    <i class="fa fa-search" aria-hidden="true" style="display: inline;;color: #053E59;"></i>
+                    <p style="display: inline;font-weight: bold;;color: #053E59;">Especialización</p>
+                  </article>
+                  <%= f.collection_select :industry_ids, Industry.all, :id, :name, {:prompt => 'Selecciona una industria'},{:class => 'imputs-contact3 w-100', :id => 'industry_selection'} %>
+           
+                  <button id="btn-email" class="w-100 top-space white-text"><%= f.submit "Finalizar", class:"remove-submit-btn-style white-text", style:'font-weight: bold;' %></button>
+                  <br>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="text-center content-bulb">
+                <i class="fa fa-lightbulb-o" id="bulb" aria-hidden="true"></i>
+                <p class="text-forthe-bulb">Siempre puedes cambiar esto después</p>
+              </div>
+            </div>
+          </div>
+        </dir>
+      </div>
+      <div class="col-sm-1 col-lg-2"></div>
+    </div>
+  </fieldset>
+</div>

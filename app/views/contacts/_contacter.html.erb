@@ -1,0 +1,50 @@
+<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Contacto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_tag(send_email_company_path, method: :post) do %>
+          <div class="form-group">
+              <label for="colFormLabel" class="col-12 col-form-label labels-contact">Mensaje</label>
+              <div class="col-sm-11">
+                <%= text_area_tag 'message',nil,  class: 'w-100 imputs-contact form-control', :required => true , id:"inputMessage"%>
+              </div>
+          </div>
+           <div class="form-group">
+              <label for="colFormLabel" class="col-12 col-form-label labels-contact">Correo</label>
+              <div class="col-sm-11">
+                <%= email_field_tag 'email', nil, class: 'imputs-contact w-100 form-control', :required => true, id: "inputEmail" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-6 ">
+                <label for="colFormLabel" class="col-12 col-form-label labels-contact">Teléfono</label>
+                <div class="col-sm-12">
+                  <%= text_field_tag 'phone_number',nil,  class: 'w-100 imputs-contact form-control', :required => true,  pattern: "^[0-9-+ ()]*$", id: "inputTel"  %>
+                </div>
+              </div>
+              <div class="form-group col-sm-6">
+                  <label for="colFormLabel" class="col-12 col-form-label labels-contact">Nombre</label>
+                  <div class="col-sm-12">
+                    <%= text_field_tag 'name', nil, class: 'imputs-contact w-100 form-control', :required => true, id: "inputName"  %>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group" style="display: none">
+              <div class="col-sm-10" style="margin: auto;">
+                <%= text_field_tag :email_company,nil, class: "w-100 imputs-contact", :value => @user.email %>
+              </div>
+            </div>
+          <div class="row">
+            <%= submit_tag 'Contactar', class:" w-50 contactar-soluciones btn-dimisse", style: "text-align: center;border-radius: 5px; color:white; font-weight: bold;margin: auto;background-color: #0087FF;", id:"boton" %>
+          </div>
+          <%end%>
+      </div>
+    </div>
+  </div>
+</div>

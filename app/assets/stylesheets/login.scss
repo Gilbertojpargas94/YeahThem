@@ -1,0 +1,375 @@
+$custom_green: #41968A;
+$custom_blue: #0073b1;
+
+
+.margin-footer-log{
+  display: none;
+}
+.login-page {
+  margin-top: 1em;
+}
+.form {
+  background: #FFFFFF;
+  margin: 0 auto 50px;
+  padding: 25px 40px 120px 40px !important;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: $custom_blue;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 1em;
+  font-weight: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: $custom_green;
+  font-size: 12px;
+  font-weight: bold;
+}
+.form .message a {
+  color: $custom_green;
+  text-decoration: none;
+}
+
+.message-link {
+  color: $custom_green;
+  text-decoration: none;
+}
+
+.custom-green {
+  color: $custom_green;
+}
+
+.custom-blue {
+  color: $custom_blue;
+}
+
+.bg-c-blue {
+  background-color: $custom_blue !important;
+}
+
+.btn-c-blue {
+  background-color: $custom_blue;
+  color: #fff;
+}
+
+.white-text {
+  color: #fff;
+}
+
+#login-container fieldset:not(:first-of-type) {
+  display: none;
+}
+
+#log-email::placeholder {
+  color: $custom_green;
+}
+
+#log-password::placeholder {
+  color: $custom_green;
+}
+
+#addon-email {
+  border-color: $custom_green;
+}
+
+.border-green {
+  border-color: $custom_green;
+}
+
+.fa-user {
+  color: $custom_green;
+}
+
+.fa-lock {
+  color: $custom_green;
+}
+
+.remove-submit-btn-style {
+  background: none;
+  border: none;
+}
+
+
+// FOR LOGIN RESPONSIVE
+
+
+
+// FOR REGISTER VIEW
+.register-page {
+  margin-top: 1em;
+}
+
+.form-regis {
+  position: relative;
+  z-index: 1;
+  background: #E0E0E0;
+  max-width: 40em;
+  margin: auto;
+  padding: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form-head {
+  background: #EEEEEE;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+}
+
+.form-container {
+  z-index: 1;
+  max-width: 35em;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  form {
+    margin: 0;
+    border-radius: 5px;
+    background: #E0E0E0;
+  }
+}
+
+.form-body {
+  padding: 15px;
+  box-sizing: border-box;
+  background: #E0E0E0;
+}
+
+
+// STEPS CSS
+
+.steps-bar {
+ width: 80%;
+ margin-left: -80px;
+}
+
+ul.steps-indicator {
+ bottom: 0;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ left: 0;
+ list-style: outside none none;
+ margin: 0;
+ right: 0;
+ width: 100%;
+ padding: 24px 0 10px;
+}
+
+ul.steps-indicator.steps-3:before {
+ left: 16.6667%;
+ right: 16.6667%;
+}
+ul.steps-indicator li {
+ padding: 20px 0 0;
+ margin: 0;
+ position: relative;
+ width: 33.3333%;
+ pointer-events: none;
+}
+ul.steps-indicator li:after {
+ background-color: rgb(213,226,227);
+ height: 20px;
+ top: -12px;
+ width: 20px;
+ border-radius: 100%;
+ content: "";
+ left: calc(50% - 7px);
+ line-height: 14px;
+ position: absolute;
+ text-align: center;
+ transition: all 0.25s ease 0s;
+ vertical-align: middle;
+ border: 3px solid white;
+}
+ul.steps-indicator li:not(:last-child):before {
+ background-color: white;
+ content: "";
+ height: 3px;
+ left: calc(62%);
+ position: absolute;
+ top: -4px;
+ width: calc(80%);
+}
+ul.steps-indicator li div {
+ align-items: center;
+ display: flex;
+ flex-direction: column;
+}
+ul.steps-indicator li div a {
+ color: black;
+ cursor: pointer;
+ font-family: arial;
+ font-size: 1em;
+ font-weight: bold;
+ line-height: 1em;
+ text-align: center;
+ text-decoration: none;
+ transition: all 0.25s ease 0s;
+}
+
+ul.steps-indicator li.done:after,
+ul.steps-indicator li.current:after,
+ul.steps-indicator li.done:not(:last-child):before {
+ background-color: rgb(213,226,227);
+ border: 3px solid #3079ed;
+}
+ul.steps-indicator li.current div a {
+ color: #3e4350;
+}
+
+.imputs-log{
+  height: 30px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.login {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 50px;
+  padding: 7px 8px;
+  cursor: pointer;
+
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.login-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.links-log{
+    text-align: center;
+    font-weight: bold;
+    text-align: right;
+    font-size: .8em;
+    margin-top: 20px;
+    padding: 0px 10px;
+}
+
+.links-log a:hover{
+    text-decoration: none;
+    background-color:transparent;
+    color: black;
+}
+
+.acced-text{
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.container-log{
+  padding: 25px 20px 20px 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-actions{
+    text-align: center;
+    margin-top: 25px; 
+}
+
+.container-regist-in-log{
+    margin-bottom: 30px; 
+    margin-top: 20px;
+}
+
+.link-regist{
+  font-weight:bold;
+}
+
+.link-regist:hover{
+    text-decoration: none;
+    background-color:transparent;
+}
+
+.padding-main-log{
+  padding-top: 85px;
+  padding-bottom: 20px;
+}
+
+.singup {
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  padding: 5px 8px;
+  cursor: pointer;
+
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.singup-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.sign-in{
+  font-weight: bold;
+}
+
+.arrows-signup{
+    background-color: white;
+    margin-top:15px;
+    height:40px;
+    margin-right:8px;
+    padding-top:8px;
+    border-radius:5px;
+    color: #053E59;
+}
+.text-forthe-bulb{
+    font-size: 1em;
+    color: #BABABA; 
+    margin-top: 0.7em;
+}
+
+#bulb{
+    color: #BABABA;
+    font-size: 70px;
+}
+
+.content-bulb{
+    border: 1px solid  #CACBD5;
+    margin: auto; 
+    padding: 25px 35px;
+    width: 90%;
+}
+
+#industry_selection{
+  -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}

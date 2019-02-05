@@ -1,0 +1,10 @@
+$('<%= j render "thanks" %>').on('shown.bs.modal', function (e) {
+	$('#btn-di').click(function() {
+		$('#share-modal').modal("hide");
+	});
+ 
+	$(this).on('hidden.bs.modal', function(e){
+		$(this).remove();
+		$('.modal-backdrop').remove();
+	});
+}).modal();

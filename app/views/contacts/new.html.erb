@@ -1,0 +1,86 @@
+<%= render 'partials/navbar' %>
+<header class="header-contact" style="background-color: #427AFF">
+	<div class="container-fluid my-1 pl-sm-5">
+		<div class="row ml-sm-1 ml-md-3 ml-lg-5" >
+			<div class="col-8 col-sm-6 col-md-5 col-xl-4" >
+				<h1 class="contact-head">Obten más información sobre Yeah Them </h1>
+			</div>
+		</div>
+		<div class="row ml-sm-1 ml-md-3 ml-lg-5">
+			<div class="col-sm-8 col-md-7 col-xl-6" >
+				<h5 class="contact-head2">No importa si estas empezando o tienes una duda puntual, te daremos todas las respuestas para que admistres la infomarmación de tu negocio en Yeah Them</h5>
+			</div>
+		</div>
+	</div>
+</header>
+<main class="main-company_solution container-fluid">
+  	<section class="row">
+  		<article class="col-sm-6 text-center">
+  			<h3 class="information-contact">Obtén ayuda rápidamente</h3>
+		</article>
+		<article class="col-sm-6 form-contact">
+			<div style="margin-bottom: 50px;">
+  				<header class="sub-header">Contactar</header>
+  				<%= form_tag(send_message_with_email_path, method: :post) do %>
+					  <div class="form-group">
+					      <%= text_field_tag 'name', nil, class: 'imputs-contact2', :required => true, placeholder: 'Nombre y Apellido'  %>
+					  </div>
+					  <div class="form-group">
+					      <%= email_field_tag 'email', nil, class: 'imputs-contact2 ', :required => true, placeholder: 'E-mail' %>
+					  </div>
+					  <div class="form-group">
+					      <%= text_area_tag 'message',nil,  class: ' imputs-contact2', :required => true, placeholder: 'Mensaje', style:'resize:none;'  %>
+					  </div>
+						<%= submit_tag 'Enviar', class:"contactar-soluciones btn" %>
+				<%end%>
+			</div>
+		</article>
+	</section>
+	<section class="container-fluid">
+		<div class="row">
+	        <div id="section-text" class="w-100 my-5">
+	            <article class="text-center w-100 mb-5">
+	                <h3 class="text-center begin-text-contact">
+	                    ¿Comenzamos? 
+	                </h3>
+	                <h6 class=" begin-texts-contact" >
+	                    Registrarte es gratis y solo te llevará unos minutos. Obtén tu perfil ahora mismo y comienza a disfrutar de sus beneficios. 
+	                </h6>
+	                <div class="nav-item btn-begin2-contact">
+	                  <%= link_to new_user_registration_path, remote: true, class: 'nav-link bg-success-custom text-white', id: 'nav-link2' do %> 
+	                      <h6  class="beging-now">COMENZAR AHORA</h6>
+	                  <% end %>
+	                </div>
+	            </article>          
+	        </div>
+        </div>
+	</section>
+</main>
+<footer class="footer-page" style="background-color: #e4e4e4;">
+    <div class="whitespacefoo" style="width:80px;"></div>
+    <div class="content-foo">
+        <a href="#" class="links-in-foot text-secondary">Sobre Nosotros</a>
+        <a href="#" class="links-in-foot text-secondary">Política de Privacidad</a>
+        <a href="#" class="links-in-foot text-secondary">Terminos de Uso</a>
+    </div>
+    <div class="social-foo">
+        <ul style="padding-top: 5px;">
+            <a class="circle-links" href="" style="padding: 5px 5px 5px 9px;"> 
+            	<li style="margin-right: 0px;">
+            		<i class="fa fa-facebook"></i>
+            	</li>
+            </a>
+            <a class="circle-links" href="" style="padding: 5px 0px 5px 8px;"> 
+            	<li style="margin-right: 0px;">
+            		<i class="fa fa-twitter-square"></i>
+            	</li>
+            </a>
+            <a class="circle-links" href="" style="padding: 5px 7px 5px 7px"> 
+            	<li style="margin-right: 0px;">
+            		<i class="fa fa-instagram"></i>
+            	</li>
+            </a>
+        </ul>
+    </div>
+</footer>
+

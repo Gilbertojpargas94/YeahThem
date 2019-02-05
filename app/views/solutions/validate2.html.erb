@@ -1,0 +1,100 @@
+<main class="main-company_solution">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <aside class="col-sm-5 col-lg-4 col-xl-3 " style="margin-bottom: 25px;">
+      <div class="card shadow-style">
+        <h3 class="title-card-solution"><%= @solution.title %></h3>
+        <%= link_to company_path(@solution.company), style: "text-decoration:none; color: #000;" do %>
+          <section class="card_title" >
+            <div class="row">
+              <div class="col-4">
+                <%= image_tag @solution.company.logo.url(:thumb), class: "card-image-title" %> 
+              </div>
+              <div class="cad-sub-title col" style="margin-left: -25px;">
+                <h5><%= @solution.company.name  %></h5>
+                <h6><%= @solution.company.industries.first.name %> - <%= @solution.industry_branches.first.name %></h6>
+              </div>
+            </div>
+          </section>
+        <% end %>
+        <%= image_tag @solution.picture.url(:medium), class: "img-card" %>
+          <div class="card-body">
+            <p class="card-text line-space"><%= @solution.description_trunc %></p>
+            <div class="container-fluid">
+              <div class="row" style="margin-top: 10px;">
+                <div id="validation-solution">
+                  <i class="material-icons ii  md-18">beenhere</i>
+                </div>
+                <div id="validation-solution-num">
+                  <p class="validado-p"><%= @solution.num_validation%> Validaciones</p>
+                </div>
+                <% cont = 0 %>
+                <div class="img-list">
+                <% @solution.clients.each do |client| %>
+                  <%cont +=1%>
+                  <% if cont <= 5 %>
+                    <% if client.image_url.nil? %>
+                      <%= image_tag "missing_client.png", class: "img-card-list-solution" %>
+                    <% else %>
+                      <%= image_tag client.image_url, class: "img-card-list-solution" %>
+                    <% end %>
+                  <% else %>
+                    <%next%>
+                  <%end%>
+                <%end%> 
+                </div>
+                <% if cont > 5 %>
+                  <div id="validation-card-solution-plus">
+                    <p class="plus-solutions"> + <%= cont - 5 %></p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+        </div>
+      </div>
+    </aside>
+    <section class="col-sm-7 col-lg-8  col-xl-9 information-solution">
+    <h1 class="custom-blue text-center" style="font-family: Segoe UI;">Selecciona los beneficios que quieres validar.</h1>
+      <div class="row benefits-solutions">
+        <article class="w-100 clients-solutions">
+          <div class="row benefit-table"  style="margin-bottom: 20px;">
+            <%= form_tag(validate_benefits_path, method: :put) do %>
+            <%= hidden_field_tag :id, params[:id] %>
+            <%= hidden_field_tag :client_id, params[:client_id] %>
+            <table class="table table-striped benefit-table-font">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 3%"></th>
+                    <th class="benefit-font" scope="col">Beneficios</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% cont = 0 %>
+                    <% @benefits.each do |benefit| %>
+                        <% cont+=1 %>
+                        <tr >
+                          <th scope="row">
+                            <label class="control control--checkbox">
+                            <%= check_box_tag 'benefits_id[]', benefit.id, false, id:"#{benefit.id}", class:"bene_checkbox" %>
+                            <div class="control__indicator"></div>
+                            </label>
+                          </th>
+                          <td><label><%= benefit.description %></label></td>
+                        </tr>
+                    <%end%>
+                    <% if cont == 0 %>
+                    <tr>
+                        <th scope="row">&bull;</th>
+                        <td></td>
+                    </tr>
+                    <%end%>
+                </tbody>
+            </table>
+          </div>
+          <%= submit_tag 'Validar', class:"btn btn-c-blue shadow-style", id:"bene-valid-btn" ,style:"padding-left: 2em; padding-right: 2em;"%>
+          <% end %> <!-- end of Form tag -->
+        </article>
+      </div>
+    </section>
+  </div>
+</main>

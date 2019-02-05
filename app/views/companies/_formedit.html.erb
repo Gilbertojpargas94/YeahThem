@@ -1,0 +1,57 @@
+<div class="form-container">
+  <%= form_with(model: company, local: true) do |form| %>
+    <% if company.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+        <ul>
+        <% company.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="register-page">
+      <div class="form-head">
+        <h2 class="text-center">Modifica tu compañia</h2>
+      </div>
+      <div class="form-body">
+        <div class="form-group">
+          <%= form.label "Nombre de la empresa" %> <span class="custom-blue">*</span>
+          <%= form.text_field :name, autofocus: true, autocomplete: "off", class:"form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label "Descripcion de la empresa" %> <span class="custom-blue">*</span>
+          <%= form.text_field :description, class:"form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label "Industria" %> <span class="custom-blue">*</span>
+          <%= form.collection_select :industry_ids, @industries, :id, :name, {:prompt => 'Selecciona una industria'},{:class => 'form-control', :id => 'industry_selection'} %>
+        </div>
+        
+        <div class="form-group">
+          <%= form.label "Localidad" %> <span class="custom-blue">*</span>
+          <%= form.text_field :address, class:"form-control" %>
+        </div>
+
+        <div class="form-group image-upload">
+            <label for="up_logo">
+              <span style="font-size:2em;">
+                <%= image_tag  "upload_image.png", size: "128" %>
+              </span>
+            </label>
+            <%= form.file_field :logo, id:"up_logo" %>
+            <%= form.label "Cambiar logo", class:"text-secondary", id:"lbl_logo", style:"margin-left: 0.8em;"%>
+        </div>
+
+        <div class="actions form-group">
+          <%= form.submit "Guardar", class:"btn btn-c-blue" %>
+          <%= link_to  "Volver", company_path(company), class:"btn btn-link" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

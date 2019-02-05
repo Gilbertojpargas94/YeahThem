@@ -1,0 +1,178 @@
+<%= render 'partials/new_navbar', {home_state: "link-homepage-active", team_state: ""} %>
+<main class="container-fluid main" id="mains">
+	<div id="h-responsive-section" class="row mb-md-5" style="position: relative;">
+        <div class="col-md-6 pt-md-3 pt-lg-5 row mt-3 mt-md-0">
+            <div class="col-xl-2 take-off">
+                
+            </div>
+            <div class="col pl-lg-5 pr-lg-5 pr-md-3" id="padding-likes-container">          
+                <article class="mt-lg-5 pr-lg-5 mb-md-3 pr-md-3">
+                    <h1 class="mt-lg-3 font-arial-title"  >
+                        Atrae nuevos clientes con tu perfil gratuito de Yeah Them
+                    </h1>
+                    <h5 class="mt-lg-3 font-arial-subtitle line-space mt-3 mt-md-0">
+                        Atrae nuevos clientes cuando busquen tu empresa en Internet o al enviar propuestas. Yeah Them te permite crear fácilmente un perfil donde expliques como has sabido ayudar ya a los clientes con los que has trabajado. 
+                    </h5>
+                </article>
+                <div class="nav-item mt-lg-5 btn-begin my-3 mt-md-0">
+                  <%= link_to new_user_registration_path, class: 'nav-link bg-success-custom text-white', id: 'nav-link2' do %> 
+                      <h6  class="beging-now">COMENZAR AHORA</h6>
+                  <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="btn-special" id="button">
+            <i class="material-icons">
+                keyboard_arrow_down
+            </i>
+        </div>
+        
+        <div class="col-md mb-md-5 mt-5 mt-md-0 getin">
+            <%= image_tag "home-imagen-b.png", class: 'h-100 w-100' %>
+        </div>
+        
+        <div class="col-md mb-md-5 mt-5 mt-md-0 getout">
+            <figure class="full-width">
+                <%= image_tag "home_b.png", class: 'h-100 w-100 ' %>
+            </figure>
+        </div>
+    </div> <!-- End of section one -->
+
+    <div id="h-responsive-section" class="row my-5 dontletmedown">
+        <div id="section-text" class="col-md-6 row mt-3 mt-md-0" style="padding: 20px 0px 5px 0px">
+            <div class="col-xl-2 take-off">
+                
+            </div>
+            <div class="col pl-lg-5 pr-lg-5  pr-md-3 pb-md-5 mx-2 mx-md-0 ml-md-3 ml-lg-0 top-space" id="padding-likes-container">
+                <article class="mt-lg-3 pr-lg-5  pr-md-3 " >
+                    <h6  class="titles-home" style="border-bottom: 2px solid #5cb85c; width: 16%;">
+                        PUBLICA
+                    </h6>
+                    <h1 class="font-arial-title">
+                        Comparte contenido relevante para atraer nuevos clientes
+                    </h1>
+                    <h5 class="font-arial-subtitle line-space mt-3 mt-md-0">
+                        Motiva a una persona interesada en contratar tus servicios a a comprobar que soluciones y resultados has sabido conseguir ya.
+                    </h5>
+                </article>
+                <div class="nav-item w-75">
+                  <%= link_to new_access_modal_path, remote: true, class: 'text-primary row link-more' do %> 
+                      <h6 style="margin: 8px 4px 8px 4px;" class="col-xl-7 col-10 col-sm-5 mr-sm-3 mr-md-0 col-md-8">MÁS INFORMACIÓN</h6> 
+                  <% end %>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md mb-lg-5 mb-5 mt-5 mt-md-0 getin">
+            	<%= image_tag "2-3_b.png", class: 'h-100 w-100' %>
+        </div>
+        <div class="col-md mb-lg-5 mb-5 mt-5 mt-md-0 getout">
+        	<figure class="full-width" id="padding-img-responsive">
+            	<%= image_tag "2-3_b.png", class: 'h-100 w-100' %>
+        	</figure>
+        </div>
+    </div> <!-- End of section 2 -->
+
+    <div id="h-responsive-section" class="row pt-xl-3 my-5">
+        <div id="section-text" class="col-md-6 row mt-3 mt-md-0" style="padding: 20px 0px 5px 0px">
+            <div class="col-xl-2 take-off">
+                
+            </div>
+            <div class="col pl-lg-5 pr-lg-5 pr-md-3 pb-md-5 mx-2 mx-md-0 ml-md-3 ml-lg-0" id="padding-likes-container">
+                <article class="mt-lg-3 pr-lg-5 pr-md-3">
+                    <h6 class="titles-home" style=" border-bottom: 2px solid #d9534f; width: 19%;">
+                        RESPALDO
+                    </h6>
+                    <h1 class="font-arial-title">
+                        Muestra el respaldo de los clientes con lo que ya has trabajado
+                    </h1>
+                    <h5 class="font-arial-subtitle line-space mt-3 mt-md-0">
+                        Gánate la confianza de un cliente potencial luciendo el apoyo de aquellos clientes que ya han trabajado contigo.
+                    </h5>
+                </article>
+                <div class="nav-item w-75">
+                  <%= link_to new_access_modal_path, remote: true, class: 'text-primary row link-more' do %> 
+                      <h6 style="margin: 8px 4px 8px 4px;" class="col-xl-7 col-10  col-sm-5 mr-sm-3 mr-md-0 col-md-8">MÁS INFORMACIÓN</h6> 
+                  <% end %>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md mb-lg-5 mb-5 mt-5 mt-md-0 getin ">
+            <%= image_tag "4_b.png", class: 'w-50 h-100', style: 'margin-left: 20%;' %>
+        </div>
+        <div class="col-md mb-lg-5 mb-5 mt-5 mt-md-0 px-5 px-sm-0 getout img-responsive">
+            <%= image_tag "home-movil-4.png", class: 'w-50 h-100 img-responsive' %>
+        </div>
+    </div> <!-- End of section 3 -->
+
+    <div id="h-responsive-section" class="row pt-xl-5 my-5 ">
+        <div id="section-text" class="col-md-6 pt-lg-5 pt-3 row mt-3 mt-md-0" style="padding: 20px 0px 5px 0px">
+            <div class="col-xl-2 take-off">
+                
+            </div>
+            <div class="col pl-lg-5 pr-lg-5 pr-md-3 pb-md-5 mx-2 mx-md-0 ml-md-3 ml-lg-0" id="padding-likes-container">
+                <article class="mt-lg-5 pt-lg-3 pr-lg-5 pr-md-3">
+                    <h6 class="titles-home" style="border-bottom: 2px solid #d9534f; width: 16%;">
+                        CONTROL
+                    </h6>
+                    <h1 class="font-arial-title">
+                        Recupera el poder y comunica los beneficios de tus servicios
+                    </h1>
+                    <h5 class="font-arial-subtitle line-space mt-3 mt-md-0">
+                        Deja constancia de todo aquello que ya has sabido hacer y diferénciate de la competencia estableciendo credibilidad y confianza. 
+                    </h5>
+                </article>
+                <div class="nav-item w-75">
+                  <%= link_to new_access_modal_path, remote: true, class: 'text-primary row link-more' do %> 
+                      <h6 style="margin: 8px 4px 8px 4px;" id="prub" class="col-xl-7 col-10 col-sm-5 mr-sm-3 mr-md-0 col-md-8">MÁS INFORMACIÓN</h6> 
+                  <% end %>
+                </div>
+             </div>
+            
+        </div>
+        <div class="col-md mb-lg-5 mb-5 mt-5 mt-md-0 getin">
+            	<%= image_tag "5_a.png", class: 'w-100 h-100' %>
+        </div>
+        <div class="col-md mb-lg-5 mb-5 mt-5 mt-md-0 getout">
+        	<figure class="full-width" id="padding-img-responsive">
+            	<%= image_tag "5_a.png", class: 'w-100 h-100' %>
+        	</figure>
+        </div>
+    </div> <!-- End of section 4 -->
+
+    <div id="h-responsive-section" class="row mt-lg-5 mt-3" style="background-color: #428bca;" id="padding-footer">
+        <div id="section-text" class="row w-100 mt-lg-5 pt-lg-5 mt-3 pt-3">
+            <article class="text-center w-100 mt-5 mb-5 mb-sm-0">
+                <h2 class="text-center text-white begin-text">
+                    ¿Comenzamos? 
+                </h2>
+                <h6 class="text-white begin-texts ml-md-4 ml-lg-1" >
+                    Registrarte es gratis y solo te llevará unos minutos. Obtén tu perfil ahora mismo y comienza a disfrutar de sus beneficios. 
+                </h6>
+                <div class="nav-item btn-begin2  mb-sm-4 mb-md-0 my-2">
+                  <%= link_to new_user_registration_path, class: 'nav-link bg-success-custom text-white', id: 'nav-link2' do %> 
+                      <h6 class="beging-now">COMENZAR AHORA</h6>
+                  <% end %>
+                </div>
+            </article>          
+        </div>
+        <div class="row w-100 pl-4 px-md-5 mt-md-5">
+            <%= image_tag "6_b.png", class: 'img-home-foot w-100 h-100 mx-md-5 mx-2 mx-sm-0' %>
+        </div>
+    </div>
+
+    <!-- For show a toast message -->
+    <div id="snackbar">Correo enviado correctamente</div>
+
+	<script type="text/javascript">
+	$("#button").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $(".dontletmedown").offset().top
+	    }, 1000);
+	});
+	</script>
+</main>
+<div class="container-fluid">
+    <%= render 'partials/new_footer'%>
+</div> 

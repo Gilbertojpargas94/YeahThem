@@ -1,0 +1,113 @@
+.top-space {
+	margin-top: 2em;
+}
+
+.min-top-space {
+	margin-top: 1em;
+}
+
+.bottom-space {
+	margin-bottom: 1.5em;
+}
+
+.left-space {
+	margin-left: 1.2em;
+}
+
+.lg-left-space {
+	margin-left: 2em;
+}
+
+.client-padding {
+	padding-right: 3% !important;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.logo {
+	background-size: cover;
+	background-position: center;
+}
+
+.div-f {
+	float: right;
+}
+
+.shadow-style {
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.16), 0 0 8px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.16), 0 0 8px rgba(0,0,0,0.23);
+	box-shadow: 0 0 6px rgba(0,0,0,0.16), 0 0 8px rgba(0,0,0,0.23);
+}
+
+.bottom-shadow {
+	box-shadow: 0 0 8px 0 rgba(0,0,0,.3) !important;
+}
+
+.line-space {
+	line-height: 1.5em;
+}
+
+.bg-success-custom {
+	background-color: #00c853;
+}
+
+.text-light-custom {
+	color: #2962ff;
+}
+
+.text-blue-grey {
+	color: #1d2d35;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

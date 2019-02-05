@@ -1,0 +1,112 @@
+<header class="header-contact">
+	<h2 class="contact-head">¿Como Podemos Ayudarte?</h2>
+</header>
+<main class="main-company_solution">
+  	<section class="row">
+  		<article class="col-sm-6 order-last order-sm-first form-contact">
+  			<div style="margin-bottom: 50px;">
+  				<div class="row">
+  					<div class="col-sm-0 col-lg-4"></div>
+  					<header class="sub-header col-sm-11 col-lg-8">Contactar</header>
+  				</div>
+  				<%= form_tag(send_message_with_email_path, method: :post) do %>
+					  <div class="form-group row">
+					  	<div class="col-lg-4 col-sm-0"></div>
+					    <label for="colFormLabel" class="col-lg-2 col-sm-4 col-form-label labels-contact">Nombre y Apellido</label>
+					    <div class="col-lg-6 col-sm-7" >
+					      <%= text_field_tag 'name', nil, class: 'imputs-contact w-100', :required => true  %>
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					  	<div class="col-lg-4 col-sm-0"></div>
+					    <label for="colFormLabel" class="col-lg-2 col-sm-4 col-form-label labels-contact">Correo</label>
+					    <div class="col-lg-6 col-sm-7" >
+					      <%= email_field_tag 'email', nil, class: 'imputs-contact w-100', :required => true %>
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					  	<div class="col-lg-4 col-sm-0"></div>
+					   <label for="colFormLabel" class="col-lg-2 col-sm-4 col-form-label labels-contact">Mensaje</label>
+					    <div class="col-lg-6 col-sm-7">
+					      <%= text_area_tag 'message',nil,  class: 'w-100 imputs-contact', :required => true  %>
+					    </div>
+					  </div>
+					<div class="row">
+						<div class="col-8  col-lg-10"></div>
+						<%= submit_tag 'Enviar', class:"col-3  col-lg-2 contactar-soluciones", style: "text-align: center;border-radius: 5px; color:white; font-weight: bold;" %>
+					</div>
+				<%end%>
+			</div>
+		</article>
+		<article class="col-sm-6 order-first order-sm-last">
+			<div class="row direccion-solutions" >
+				<div class="map-contact"><iframe width="250" height="250" class="map-contact" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=Madrid&output=embed"></iframe></div>
+			</div>
+			<h2 class="text-center">Sede principal</h2>
+			<div class="row" style="margin-top: 10px;">
+				<div class="w-50 address-contact">
+					<p class="text-secondary">411 Avenida</p>
+					<p class="text-secondary">Ciudad, Zona</p>
+					<p class="text-secondary">Tfl: 514 545 745</p>
+				</div>
+			</div>
+		</article>
+	</section>
+	<section class="row">
+		<article class="col-sm-6 order-last order-sm-first form-contact">
+			<div style="margin-bottom: 50px;">
+				<div class="row">
+  					<div class="col-lg-4 col-sm-0"></div>
+  					<header class="sub-header col-lg-8 col-sm-11">Te Llamamos</header>
+  				</div>
+				<%= form_tag(send_message_path, method: :post) do %>
+					  <div class="form-group row">
+					  	<div class="col-lg-4 col-sm-0"></div>
+					    <label for="colFormLabel" class="col-lg-2 col-sm-4 col-form-label labels-contact">Nombre y Apellido</label>
+					    <div class="col-lg-6 col-sm-7" >
+					      <%= text_field_tag 'name', nil, class: 'imputs-contact w-100', :required => true  %>
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					  	<div class="col-lg-4 col-sm-0"></div>
+					   <label for="colFormLabel" class="col-lg-2 col-sm-4 col-form-label labels-contact">Teléfono</label>
+					    <div class="col-lg-6 col-sm-7">
+					      <%= text_field_tag 'phone_number',nil,  class: 'w-100 imputs-contact', :required => true,  pattern: "^[0-9-+ ()]*$"  %>
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					  	<div class="col-lg-4 col-sm-0"></div>
+					    <label for="colFormLabel" class="col-lg-2 col-sm-4 col-form-label labels-contact">Hora de contactar</label>
+					    <div class="col-lg-6 col-sm-7">
+							<%= select_tag 'time_job', "<option>Mañana</option>
+							<option>Tarde</option>
+							<option>Noche</option>".html_safe, multiple: false, class: 'w-100 imputs-contact'%>
+					    </div>
+					  </div>
+					<div class="row">
+						<div class="col-8  col-lg-10"></div>
+						<%= submit_tag 'Enviar', class:"col-3  col-lg-2 contactar-soluciones", style: "text-align: center;border-radius: 5px; color:white; font-weight: bold;" %>
+					</div>
+				<%end%>
+			</div>
+		</article>
+		<article class="col-sm-6 order-first order-sm-last number-contact">
+			<div class="container-fluid another-things">
+				<div class="row">
+					<h5 class="title-another">Tu puedes encontrarnos aqui</h5>
+				</div>
+				<div class="row">
+					<h6 class="title-another col-12">Número Teléfonico</h6>
+					<p class="datos-another col-12">054564054564</p>
+				</div>
+				<div class="row">
+					<h6 class="title-another col-12">E-mail</h6>
+					<p class="datos-another col-12">ejemplo@gmail.com</p>
+				</div>
+			</div>
+		</article>
+	</section>
+</main>
+<%= render 'partials/footer'%>
+
+

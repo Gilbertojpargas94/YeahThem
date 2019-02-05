@@ -1,0 +1,33 @@
+$('<%= j render "validate" %>').on('shown.bs.modal', function (e) {
+	$('#btn-dimiss').click(function() {
+		$('#share-modal').modal("hide");
+	});
+
+	$('.button-modal').on('click', (e)=>{
+		let color=$(e.target).css('color');
+			if(color=='rgb(25, 135, 255)'){
+				//el mismo
+				$(e.target).css({"color": "#6cc33c","border": "2px solid #6cc33c"});
+				//los padres
+				let losdemas =$(e.target).parent();
+				losdemas.css({"color": "#6cc33c","border": "#2px solid #6cc33c"});
+				//los hijos
+				let losdemas2 =$(e.target).children();
+				losdemas2.css({"color": "#6cc33c","border": "#2px solid #6cc33c"});	
+			}else{
+				//el mismo
+				$(e.target).css({"color": "","border": ""});
+				//los padres
+				let losdemas =$(e.target).parent();
+				losdemas.css({"color": "","border": ""});
+				//los hijos
+				let losdemas2 =$(e.target).children();
+				losdemas2.css({"color": "","border": ""});
+			}		
+	});
+		
+	$(this).on('hidden.bs.modal', function(e){
+		$(this).remove();
+		$('.modal-backdrop').remove();
+	});
+}).modal();

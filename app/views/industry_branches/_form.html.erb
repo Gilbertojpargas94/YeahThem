@@ -1,0 +1,41 @@
+<div class="container">
+  <%= form_with(model: industry_branch, local: true) do |form| %>
+    <% if industry_branch.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(industry_branch.errors.count, "error") %> prohibited this industry_branch from being saved:</h2>
+
+        <ul>
+        <% industry_branch.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="col-md-6 offset-md-3 top-space">
+      <div class="form-head">
+        <h2 class="text-center">Modifica tu compañia</h2>
+      </div>
+      <% if params[:industry_id] != nil %>
+        <div class="form-group">
+          <%= form.hidden_field :industry_id, :value => params[:industry_id] %>
+        </div>
+        <label for="recipient-name" class="custom-blue">Industria</label>
+        <input type="text" class="form-control" id="recipient-name" disabled value="<%=current_user.company.industries.first.name%>">
+      <% else %>
+        <div class="form-group">
+          <%= form.label "Selecciona una industria" %>
+          <%= form.collection_select :industry_id, @industries, :id, :name, {:prompt => 'Industrias'},{:id => 'industry_selection'} %>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= form.label "Nombre", class:"custom-blue" %>
+        <%= form.text_field :name, class:"form-control" %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Crear categoria", class:"btn btn-c-blue" %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,85 @@
+<div class="card img-card-shadow" id="card">
+  <div class="row">
+    <div class="col-10">
+      <h3 class="title-card">
+        <% if edit %>
+          <%= link_to solution.title, edit_solution_path(solution), class:"text-secondary", style:"text-decoration:none;" %>
+          <div class="div-f text-right">
+            <%= link_to edit_solution_path(solution), style:"text-decoration:none; color:#000;" do %>
+              <i class="material-icons md-18">
+                edit
+              </i>
+            <% end %>
+          </div>
+          <% else %>
+            <%= link_to  solution.title, solution_path(solution), class:"text-secondary", style:"text-decoration:none;" %>
+        <% end %>
+      </h3>
+    </div>
+    <div class="col-2" style="font-weight: bold; color: #B2BBC1;">
+      <%= contador unless contador == nil %>
+    </div>
+  </div>
+  <% if edit %>
+    <section class="card_title row">
+      <%= image_tag solution.company.logo.url(:thumb), class: "card-image-title col-3" %>  
+      <div class="cad-sub-title col-9">
+        <div class="row">
+          <h5 class="company-name-font"><%= solution.company.name  %></h5>
+        </div>
+        <h6 id="company-industry-font"><%= solution.company.industries.first.name %> - <%= solution.industry_branches.first.name %></h6>
+      </div>
+    </section>
+    <%= link_to edit_solution_path(solution), style: "text-decoration:none; color: #000;" do %>
+      <%= image_tag solution.picture.url(:medium), class: "img-card" %>
+    <%end%>
+  <% else %>
+    <%= link_to company_path(solution.company), style: "text-decoration:none; color: #000;" do %>
+      <section class="card_title row">
+        <%= image_tag solution.company.logo.url(:thumb), class: "card-image-title col-3" %>  
+        <div class="cad-sub-title col-9">
+          <div class="row"> 
+             <h5 class="company-name-font"><%= solution.company.name %></h5>
+          </div>
+          <h6 id="company-industry-font"> <%= solution.company.industries.first.name %> - <%= solution.industry_branches.first.name %> </h6>
+        </div>
+      </section>
+    <%end%>
+    <%= link_to solution_path(solution), style: "text-decoration:none; color: #000;" do %>
+      <%= image_tag solution.picture.url(:medium), class: "img-card" %>
+    <%end%>
+  <% end %> <!-- End of If edit -->
+    <div class="card-body" id="card-body">
+      <p class="card-text line-space"><%= solution.description_trunc %></p>
+    </div>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 10px;">
+        <div id="validation-card-solution">
+          <i class="material-icons ii  md-18">beenhere</i>
+        </div>
+        <div id="validation-card-solution-num" >
+          <p class="validado-p"><%=solution.num_validation%> Validaciones</p>
+        </div>
+        <% cont = 0 %>
+        <div class="img-list">
+        <% solution.clients.each do |client| %>
+          <%cont +=1%>
+          <% if cont <= 5 %>
+            <% if client.image_url.nil? %>
+              <%= image_tag "missing_client.png", class: "img-card-list" %>
+            <% else %>
+              <%= image_tag client.image_url, class: "img-card-list" %>
+            <% end %>
+          <% else %>
+            <%next%>
+          <%end%>
+        <%end%> 
+        </div>
+        <% if cont > 5 %>
+          <div id="validation-card-solution-plus">
+            <p class="plus-solutions"> + <%= cont - 5 %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+$('<%= j render "share" %>').on('shown.bs.modal', function (e) {
+	$('#cp-msg').css('visibility', "hidden");
+	
+	$('#cp-action').click(function() {
+		var text = $('#url').val();
+		copytext(text, this);
+		$('#cp-msg').css('visibility', "visible");
+	});
+
+	function copytext(text, context) {
+	    var textField = document.createElement('textarea');
+	    textField.innerText = text;
+
+	    if (context) {
+	        context.parentNode.insertBefore(textField, context);
+	    } else {
+	        document.body.appendChild(textField);
+	    }
+
+	    textField.select();
+	    document.execCommand('copy');
+	    // Let `.remove()` also work with older IEs
+	    textField.parentNode.removeChild(textField);
+	    console.log('should have copied ' + text);
+	}
+	
+	$('#btn-dimiss').click(function() {
+		$('#share-modal').modal("hide");
+	});
+
+	$(this).on('hidden.bs.modal', function(e){
+		$(this).remove();
+		$('.modal-backdrop').remove();
+	});
+
+}).modal();

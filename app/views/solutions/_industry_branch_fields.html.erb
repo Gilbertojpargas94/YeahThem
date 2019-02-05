@@ -1,0 +1,9 @@
+<div class="nested-fields">
+  <div>
+    <%= f.hidden_field :industry_id, :value => @company.industries.first.id%>
+  </div>
+  <div class="field form-group">
+    <%= f.label "Categoria", class:"custom-green" %>
+    <%= f.text_field :name, class:"form-control bottom-space" %>
+  </div>
+</div>

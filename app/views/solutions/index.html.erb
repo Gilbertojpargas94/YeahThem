@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Soluciones</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Imagen</th>
+      <th>Compañia</th>
+      <th>Categoria</th>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Validaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solutions.each do |solution| %>
+      <tr>
+        <td><%= image_tag solution.picture.url(:medium) %></td>
+        <% if solution.company == nil %>
+          <p>No tiene compañia</p>
+        <% else %>
+        <td><%= solution.company.name %></td>
+        <% end %>
+        <td><%= solution.industry_branches.first.name %></td>
+        <td><%= solution.title %></td>
+        <td><%= solution.description %></td>
+        <td><%= solution.num_validation %></td>
+        <td><%= link_to 'Show', solution %></td>
+        <td><%= link_to 'Edit', edit_solution_path(solution) %></td>
+        <td><%= link_to 'Destroy', solution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Solution', new_solution_path %>

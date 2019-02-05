@@ -1,0 +1,97 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <%= image_tag  "info-bg.jpg" %>
+            <div class="container">
+                <div id="carousel-caption" class="text-center">
+                    <div class="bottom-space">
+                        <h4 id="d-work" class="display-3">Muestra tu trabajo</h4>
+                        <h5>Convierta a los clientes satisfechos en tus activos de marketing y ventas más potentes
+                        </h5>
+                        <%= link_to  new_user_registration_path do %>
+                            <button class="btn btn-lg btn-i-green top-space">Publica tu solución</button>
+                        <%end%>
+                    </div>
+                    <div id="panel-info" class="row bg-opacity">
+                        <div class="col-sm">
+                        <h5 class="text-center" id="text-info"  style="width: 50%; margin-left: 5em;">
+                            Búsquedas de promedios realizadas por compradores
+                            <span><h1 class="text-center" style="font-weight: bold;">12</h1></span>
+                        </h5>
+                        </div>
+                        <div class="col-sm">
+                        <h5 class="text-center" id="text-info" style="width: 70%; margin-left: 3em;">
+                            Clientes que comienzan su proceso de compra con una búsqueda en google
+                            <span><h1 class="text-center" style="font-weight: bold;">3/4</h1></span>
+                        </h5>
+                        </div>
+                        <div class="col">
+                        <h5 class="text-center" id="text-info" style="width: 60%; margin-left: 3em;">
+                            Consumidores que navegan por la web antes de realizar una compra
+                            <span><h1 class="text-center" style="font-weight: bold;">81%</h1></span>
+                        </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End of Carousel -->
+<h1 class="text-center title-info-general" style="font-weight: bold; margin-left: 4%; margin-right: 4%; margin-top: 30px;margin-bottom: 30px;">El poder de tu solución</h1>
+<div id="info-cards" class="container-fluid">
+    <div class="row top-space">
+	    <div class="col-6 col-sm-4 col-md-3" style="padding-top: 30px">
+	       <h4 class="text-secondary text-info-general" style="font-weight: bold;">Credibilidad</h4>
+	    </div>
+      	<div class="col-6 col-sm-4 col-md-3" style="padding-top: 30px">
+            <h4 class="text-secondary text-info-general" style="font-weight: bold;">Educación</h4>
+      	</div>
+      	<div class="col-6 col-sm-4 col-md-3">
+       		<div class="cards-info shine">
+            	<h4 class="card-title white-text text-center text-info-general" style="font-weight: bold;">Validación</h4>
+           	 	<p style="font-size: 1em;" class="card-text white-text text-info-general">Proporciona la validación de terceros que los compradores necesitan para realizar una compra.</p>
+        	</div>
+      	</div>
+      	<div class="col-6 col-sm-4 col-md-3" style="padding-top: 30px">
+            <h4 class="text-secondary text-info-general" style="font-weight: bold;">Internet</h4>
+      	</div>
+      <div class="col-6 col-sm-4 col-md-3" style="padding-top: 20px">
+            <h4 class="text-secondary text-info-general" style="font-weight: bold;">Visibilidad</h4>
+      </div>
+     <div class="col-6 col-sm-4 col-md-3" style="padding-top: 20px">
+            <h4 class="text-secondary text-info-general" style="font-weight: bold;">Hechos</h4>
+
+      </div>
+      <div class="col-6 col-sm-4 col-md-3" style="padding-top: 20px">
+            <h4 class="text-secondary text-info-general" style="font-weight: bold;">Marketing</h4>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 shine" id="public-info">
+            <%= link_to new_user_registration_path, style:"text-decoration:none;" do %>
+               <h4 class="white-text text-info-general" style="font-weight: bold;">Publica tu solución</h4>
+
+            <%end%>
+      </div>
+
+    </div>
+</div> <!-- End of cards -->
+<h1 class="text-center top-space title-info-general" style="font-weight: bold;margin-left: 4%; margin-right: 4%; margin-top: 50px;margin-bottom: 30px;">Como funciona</h1>
+<div class="container-fluid" style="padding: 0% 4% 0% 4%;">
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <span style="font-size: 3em;"><i class="fa fa-edit  text-secondary "></i></span>
+            <h5 class="text-secondary text-info-general" style="font-weight: bold;">1. Publica tus soluciones</h5>
+            <p style="font-weight: bold;" class="text-secondary">Explica como ayudaste a tus clientes</p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <span style="font-size: 3em;"><i class="fa  text-secondary fa-users"></i></span>
+            <h5 class="text-secondary text-info-general" style="font-weight: bold;">2. Recibe validaciones de tus clientes</h5>
+            <p style="font-weight: bold;" class="text-secondary">Prueba que tienes clientes reales</p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <span style="font-size: 3em;"><i class="material-icons  text-secondary md-48">assignment</i></span>
+            <h5 class="text-secondary text-info-general" style="font-weight: bold;">3. Demuestra tus resultados</h5>
+            <p style="font-weight: bold;" class="text-secondary">Haz crecer tu negocio</p>
+        </div>
+    </div>
+</div>
+

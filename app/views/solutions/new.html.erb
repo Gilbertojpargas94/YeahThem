@@ -1,0 +1,194 @@
+<div class="bar-exit-editor">
+     <%= link_to your_solutions_company_path(1), class:'exit-link' do %>
+        <p> <i class="fa fa-arrow-left"></i> Exit Editor</p>
+    <%end%>
+</div>
+
+
+    <header class="header-editor-profile">
+        
+    <div class="container-edit-profile">
+        <ul>
+            <%= link_to edit_company_path(1) do %>
+                <li>About</li>
+            <%end%>
+            <%= link_to preview_new_solution_path(1) do %>
+                <li>Solutions</li>
+            <%end%>
+            <%= link_to happyclients_solution_path(1) do %>
+                <li>Happy Clients</li>
+            <%end%>
+            <%= link_to thanks_message_company_path(1) do %>
+                <li>Thanks</li>
+            <%end%>
+        </ul>
+    </div>
+
+    <div class="container-launch-page">
+        <button class="btn btn-default hvr-glow" style="cursor: none; pointer-events: none; padding: 15px 15px;">LANZA TU PÁGINA</button>
+    </div>
+
+
+    <div class="container-page-title">
+        <h2>Soluciones</h2>
+        <p>Muestra como habéis sabido ayudar ya a vuestros clientes</p>
+    </div>
+    </header>
+
+<div class="container-body-form container">
+
+    <div class="row">
+        
+        <div class="col-lg-8 col-sm-12 col-form-cont">
+            
+            <div class="container-window">
+                <div class="menu-editor-solu">
+                    <ul>
+                        <a class="linkactivepage" href=""> <li>Soluciones</li></a>
+                        <a class="hvr-underline-from-left" href=""> <li>Prácticas Recomendadas</li></a>
+                    </ul>
+                </div>
+
+                <div class="container soluciones6"> 
+                <div class="input-group group-formconfi">
+                    <div class="labeltext">
+                        <label for="">Especialización</label>
+                        <p>Requerido</p>
+                    </div>
+                    
+                    <div class="container-input">
+                        <input type="text" class="form-control input" placeholder="">
+                    </div>
+                </div>
+
+                
+                <div class="input-group group-formconfi">
+                    <div class="labeltext">
+                        <label for="">Categoría</label>
+                        <p>Requerido</p>
+                    </div>
+                    
+                    <div class="container-input select-input" >
+                        <select class="form-control w-25" id="sel1" style="display: inline;">
+                            <option>SEO</option>
+                            <option>SEO</option>
+                            <option>SEO</option>
+                            <option>SEO</option>
+                        </select>
+                        
+                        <input type="text" class="form-control input" placeholder="" style="display:inline;width: 74% !important;">
+                        
+                    </div>
+                </div>
+                
+                <div class="input-group group-formconfi">
+                    <div class="labeltext">
+                        <label for="">Solución</label>
+                        <p>Requerido</p>
+                    </div>
+                    
+                    <div class="container-input">
+                        <input type="text" class="form-control input" placeholder="">
+                        <p>X palabras / 150 caracteres</p>
+                    </div>
+                    </div>
+
+                    <div class="input-group group-formconfi">
+                     <div class="labeltext">
+                        <label for="">Solución</label>
+                        <p>Requerido</p>
+                    </div>
+
+                     <div class="container-input container-input-full">
+                       <textarea class="form-control" rows="4" id="comment" style="resize: none;"></textarea> <p>X palabras / 150 caracteres</p>
+                    </div>
+                     </div>
+
+                     <div class="input-group group-formconfi">  
+                    <div class="labeltext">
+                            <label for="">Resultados</label>
+                        <p>Hasta un máximo de 10</p>
+                    </div>
+                    
+                    <div class="container-input">
+                        <%= link_to new_benefit_path, remote:true do %>
+                            <button class="btn btn-upload">AÑADE TUS RESULTADOS</button>
+                        <%end%>
+                        <p style=" font-size: 17px;"> Explica por qué tu solución fue útil para tus clientes</p>
+                    </div>
+                </div>
+
+                    
+                <div class="input-group group-formconfi">
+                   <div class="labeltext">
+                        <label for="">Imagen de tu solución</label>
+                
+                    </div>
+                    
+                    <div class="container-input">
+                        <button class="btn btn-upload ">AÑADE TU IMAGEN</button>
+                        
+                    </div>
+                </div>
+
+               <div class="input-group group-formconfi space-input-config">
+                    <div class="labeltext">
+                        <label for="">Nombre Comercial</label>
+                        <p>Requerido</p>
+                    </div>
+                    
+            <div class="url-com">
+                <p>yeahthem   <span>.com/</span><input type="text" class="form-control " placeholder=""></p> 
+            </div>
+                </div>
+
+                <div class="menu-save-config">
+                    <%= link_to afterview_new_solution_path(1) do %>
+                        <button class="btn btn-default hvr-glow">GUARDAR SOLUCIÓN</button>
+                    <%end%>
+                    <button class="btn btn-normal hvr-glow ">CANCELAR</button>
+                </div>
+
+                
+                </div>
+
+     </div>
+
+      
+            <div class="container-window container-button-center">
+                <div class="button-center-sol">
+                    <button class="btn btn-anade-otra-sol hvr-glow">     AÑADE OTRA SOLUCIÓN</button>
+
+                </div>
+                
+         
+            </div>
+
+
+      
+        </div>
+
+
+        
+        <div class="col-lg-4 col-sm-12 col-form-progress">
+   <div class="container-window processpart">
+                <div class="left-space">
+                    <div class="circle-p"></div>
+                </div>
+                <div class="process-list">
+                    <p>Tu checklist antes de lanzar:</p>
+
+                    <ul>
+                        <li class="true" ><i class="fa fa-check"></i> Nombre comercial</li>
+                        <li class="true" ><i class="fa fa-check"></i>Especialización</li>
+                        <li class="true" ><i class="fa fa-check"></i>Imagen de portada</li>
+                        <li class="false" ><i class="fa fa-times"></i>Tus soluciones</li>
+                        <li class="false" ><i class="fa fa-times"></i>Tus resultados</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+</div>    

@@ -1,0 +1,61 @@
+<div class="modal fade" id="benefit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Añadir resultados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= form_with(model: @benefit, remote: true, html: {id: "bene-form", :"data-type" => "json"}) do |form| %>
+      <div id="bene_error_explanation" style="display: none;">
+          <!-- Append error validations here -->
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-12 col-lg-4">
+                <p class="text-secondary">Explica por que tu producto o servicio fue util para cada uno 
+                de los clientes que ayudaste.</p>
+                <p class="text-secondary">Algunas ideas donde tu puedes describir por que tu ayuda fue 
+                de utilidad.</p>
+                <button class="btn-tag" disabled>ahorro de tiempo</button>
+                <button class="btn-tag" disabled>productividad</button>
+                <button class="btn-tag" disabled>seguridad</button>
+                <button class="btn-tag" disabled>ventas/marketing</button>
+                <button class="btn-tag" disabled>eficiencia operacional</button>
+                <button class="btn-tag" disabled>conformidad</button>
+                <button class="btn-tag" disabled>servicio al cliente</button>
+                <button class="btn-tag" disabled>futuro</button>
+                <button class="btn-tag" disabled>impacto financiero</button>
+                <button class="btn-tag" disabled>asuntos financieros</button>
+            </div>
+            <div id="container-b-textarea" class="col-lg-8" class="type-benefits">
+                <div class="field">
+                  <%= form.hidden_field :solution_id, :value => params[:solution_id] %>
+                </div>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label custom-green">Resultados</label>
+                    <p class="text-secondary">
+                    Explica por que tu producto o servicio fue util para tus clientes.
+                    </p>
+                    <div class="row container-benefits">
+                      <div class="col-9 col-sm-10 ">
+                        <%= form.text_area :description, class:"form-control", id:"bene-txt-area", placeholder:"escribe aqui...", maxlength: 90 %>
+                      </div>
+                      <div class="col-3 col-sm-2 text-center btn-add-benefits" >
+                        <span><i class="fa fa-plus"></i></span>
+                        <p class="w-100"><%= form.submit "agregar", class:"btn-simply", id:"btn-add" %></p>    
+                      </div>
+                    </div>
+                    <h6 id="bene-done" style="display:none; margin-top: 10px;" class="text-success" >¡Beneficio agregado!</h6>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="bene-mod-btn" class="btn btn-c-green">Guardar</button>
+      </div>
+      <%end%>
+    </div>
+  </div>
+</div>

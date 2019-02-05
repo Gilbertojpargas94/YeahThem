@@ -1,0 +1,51 @@
+<div class="container top-space">
+  <%= form_with(model: solution, local: true) do |form| %>
+    <% if solution.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(solution.errors.count, "error") %> prohibited this solution from being saved:</h2>
+
+        <ul>
+        <% solution.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="card">
+      <div class="card-header bg-c-blue text-white">
+        Editar solución
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= form.label "Titulo" %>
+          <%= form.text_field :title, class:"form-control" %>
+        </h5>
+        <p class="card-text">
+          <div class="field">
+            <%= form.label "Descripcion" %>
+            <%= form.text_field :description, class:"form-control", maxlength: 100 %>
+          </div>
+          
+          <div class="field">
+            <%= form.label current_user.company.industries.first.name %>
+            <%= form.collection_select :industry_branch_ids, @industry_branches, :id, :name, 
+            {:prompt => 'Categorias'},{:class => 'form-control', :id => 'industry_branch_selection'} %>
+          </div>
+          
+          <div class="field image-upload">
+            <label for="up_picture">
+              <span style="font-size:2em;">
+                <%= image_tag  "upload_picture.png", size: "64" %>
+              </span>
+            </label>
+            <%= form.file_field :picture, id:"up_picture" %>
+            <%= form.label "Cambiar imagen", class:"text-secondary", id:"lbl_picture", style:"margin-left: 0.8em;"%>
+          </div>
+        </p>
+        <%= form.submit "Guardar", class:"btn btn-c-blue" %>
+        <%= link_to  "Volver", your_solutions_company_path, class:"btn btn-secondary text-white" %>
+      </div>
+    </div>
+  <% end %>
+</div>

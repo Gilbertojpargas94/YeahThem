@@ -1,0 +1,87 @@
+<div class="modal fade" id="solution-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="border-bottom: 1px solid #DADBE5; padding-bottom: 3px;">
+        <h5 class="modal-title" id="exampleModalLabel">Añadir solucion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= form_with(model: @solution, remote: true, html: {id: "solu-form", :"data-type" => "json"}) do |form| %>
+        <div id="sol_error_explanation" style="display: none;">
+            <!-- Append error validations here -->
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <%= form.label "Titulo", class:"custom-green" %>
+                <%= form.text_field :title, class:"form-control", maxlength: 19  %>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="recipient-name" class="custom-green">Industria</label>
+                        <input type="text" class="form-control" id="recipient-name" disabled 
+                        value="<%=current_user.company.industries.first.name%>">
+                    </div>
+                    <% if @industry_branches.size == 0 %>
+                        <div class="col" id="cocoon_form">
+                            <label id="lbl_cate" class="custom-green">Debe añadir una sub-categoria</label>
+                            <div id="industry_branches">
+                                <% form.fields_for :industry_branches do |branch| %>
+                                    <%= render  "industry_branches_fields", :f => branch %>
+                                <% end %>
+                                <div class='links'>
+                                    <%= link_to_add_association form, :industry_branches, id:"l_associa" do %>
+                                        <span style="font-size: 1.5em;"><i class="fa fa-plus"></i></span>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    <% else %>
+                        <div class="col-5 " id="b_collection_select"  style="padding-right: 0px;">
+                            <%= form.collection_select :industry_branch_ids, @industry_branches, :id, :name, 
+                            {:prompt => 'Categorias'},{:class => 'form-control top-space form-branchess w-100', :id => 'industry_branch_selection'} %>
+                        </div>
+                        <div class="col-1 top-space" id="cocoon_form">
+                            <div id="industry_branches ">
+                                <% form.fields_for :industry_branches do |branch| %>
+                                    <%= render  "industry_branches_fields", :f => branch %>
+                                <% end %>
+                                <div class='links'>
+                                    <%= link_to_add_association form, :industry_branches, id:"l_associa" do %>
+                                        <span class="btn-plus-modal"><i class="fa fa-plus"></i></span>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message-text" class="col-form-label custom-green">Solucion</label>
+                <p>Como ayudaste a tus clientes, explica en una oración que servicios ofreciste o como
+                fue usado tu producto</p>
+                <%= form.text_area :description, class:"form-control", maxlength: 100 %>
+            </div>
+
+            <div class="form-group image-upload">
+                <label for="message-text" class="col-form-label custom-green">Añadir foto</label>
+                <p>Selecciona una imagen que ayude a comprender el servicio que ofreces</p>
+                <label for="up_picture">
+                <span style="font-size:2em;">
+                    <%= image_tag  "upload_picture.png", size: "96x64" %>
+                </span>
+                </label>
+                <%= form.file_field :picture, id:"up_picture" %>
+                <%= form.label "Subir imagen", class:"text-secondary", id:"lbl_picture", style:"margin-left: 0.8em;"%>
+            </div>
+        </div>
+      <div class="modal-footer actions">
+        <%= form.submit "Guardar", class:"btn btn-c-green" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

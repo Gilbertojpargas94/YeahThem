@@ -1,0 +1,24 @@
+<main class="main-company_solution">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <%= render 'aside-information', comapny: @company %> 
+    <section class="col-sm-6 col-lg-8 col-xl-9" id="show-solutions">
+      <% if @solutions.count > 0 %>
+        <div class="row">
+            <p class="title-solution-short">Soluciones</p>
+        </div>
+      <%end%>
+      <div class="row" id="row-cards-company">
+        <% if @solutions.count == 0 %>
+          <%= render  "no-solutions", company: @company %>
+        <% else %>
+          <% @solutions.each do |i| %>
+            <div class="col-sm-12  col-lg-6 col-xl-4 multiple-cards">
+              <%= render 'solutions/solution', solution: i, contador: nil, edit: false %> 
+            </div>
+          <% end %>
+        <% end %>
+      </div>   
+    </section>
+  </div>
+</main>

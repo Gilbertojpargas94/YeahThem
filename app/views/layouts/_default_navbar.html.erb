@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar-general">
+  <%= link_to root_path, class: 'image-navbar-general' do %>
+    <%= image_tag("logo.png") %>
+  <% end %>
+  <%= link_to root_path, class: 'title-navbar-general' do %>
+    <h3 class="title-navbar">Partner Good</h3>
+    <% end %>
+  <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0 p-2" id="form-inline">
+      <span class="search-navbar-general-icon">
+        <i class="material-icons">search</i>
+      </span>
+      <input class="form-control " id="imput-form-general" type="search" placeholder="Buscar" aria-label="Search">
+    </form>
+    <ul class="navbar-nav ml-auto" id="navbar-items-general">
+      <li class="nav-item " id="nav-item-general" >
+        <% if user_signed_in? %>
+          <% if not current_user.company.nil? || current_user.company.id.nil? %>
+            <%= link_to your_solutions_company_path(:id => current_user.company.id), class: 'nav-link', id: 'nav-link' do %> 
+                <i class="material-icons">settings</i>
+                <p>Tus Soluciones</p>
+            <% end %>
+            <% else %> <!-- Para que registre una empresa -->
+              <%= link_to new_company_path, class: 'nav-link', id: 'nav-link' do %> 
+                  <i class="material-icons">settings</i>
+                  <p>Tus Soluciones</p>
+              <% end %>
+          <% end %>
+        <%else%>
+          <%= link_to info_path, class: 'nav-link', id: 'nav-link' do %> 
+              <i class="material-icons">supervisor_account</i>
+              <p>Registrar</p>
+          <% end %>
+        <%end%>
+      </li>
+      <li class="nav-item" id="nav-item-general">
+        <%= link_to new_contact_path, class:"nav-link", id:"nav-link" do %>
+          <i class="material-icons">
+            error_outline
+          </i>
+          <p>Ayuda</p>
+        <% end %>
+      </a>
+      </li>
+      <li class="nav-item" id="nav-item-general">
+       <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path,  method: :delete, class: 'nav-link', id: 'nav-link' do %> 
+          <i class="material-icons">exit_to_app</i>
+          <p>Cerrar Sesión</p> 
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: 'nav-link', id: 'nav-link' do %> 
+          <i class="material-icons">exit_to_app</i>
+          <p>Iniciar Sesión</p>   
+        <% end %>
+      <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,199 @@
+// Place all the styles related to the Benefits controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$custom_green: #41968A;
+$gray: #bbbbbb;
+$color--white: #FFFFFF;
+$color--black: #000000;
+$color--light-grey: #CCCCCC;
+$color--grey: #A1A1A1;
+$color--dark-grey: #7B7B7B;
+$color--primary: #2AA1C0;
+$color--secondary: #0E647D;
+
+#see-more1{
+    background-color: red;
+}
+.btn-tag {
+    border: 2px solid $custom_green !important;
+    color: $custom_green !important;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 12px;
+    margin-top: 2px;
+}
+
+.btn-add-benefits{
+    margin-left: -10px;
+}
+#btn-add {
+    color: $custom_green;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.benefit-font {
+    font-family: Segoe UI;
+    font-size: 1rem;
+}
+
+
+.benefit-table {
+    box-shadow: 0 0 6px rgba(0,0,0,0.16), 0 0 8px rgba(0,0,0,0.23);
+}
+
+.benefit-table-font tbody td {
+    font-family: Segoe UI;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.container-benefits{
+    width: 95%; 
+    padding: 2% 0%;
+    border: 1px solid #CACBD5;
+    border-radius: 5px;
+    background-color: #EAEAEA;
+}
+
+// Basic control styles
+.control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 18px;
+  
+    // Hide default browser input
+    input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+// Custom control
+.control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background: $color--light-grey;
+
+    // Hover and focus
+    .control:hover input ~ &,
+    .control input:focus ~ & {
+        background: $color--grey;
+    }
+    
+    // Checked
+    .control input:checked ~ & {
+        background: $color--primary;
+    }
+
+    // Hover when checked
+    .control:hover input:not([disabled]):checked ~ &,
+    .control input:checked:focus ~ & {
+        background: $color--secondary;
+    }
+        
+    // Hide default browser input
+    .control input:disabled ~ & {
+        background: $color--light-grey;
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: none; // Hide check
+
+        .control input:checked ~ & {
+            display: block; // Show check
+        }
+    
+        // Checkbox tick
+        .control--checkbox & {
+            left: 14px;
+            top: 6px;
+            width: 6px;
+            height: 16px;
+            border: solid $color--white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+            
+        // Disabled tick colour
+        .control--checkbox input:disabled ~ & {
+            border-color: $color--dark-grey;
+        }
+    }
+}
+
+.verticaline {
+    border-left: 2px solid #DADBE5; 
+    height: 50px;
+    margin-left: 100%;
+}
+
+.benefits-area{
+    width: 100%;
+    height: 65px;
+    resize: none;
+    border-radius: 5px;
+    border: 2px solid #DADBE5; 
+    padding: 5px;
+    font-size: 1em;
+    line-height: 20px;
+}
+
+.scroll-benefits{
+    height:200px;
+    line-height:3em;
+    overflow:auto;
+    padding:5px;
+    display: none;
+    scrollbar-base-color:#DEBB07;
+}
+
+.scoll-results{
+    height:350px;
+    overflow:auto;
+    padding:5px;
+    scrollbar-base-color:#DEBB07;
+}
+
+.benefits-area:focus{
+    border: 2px solid black;
+}
+
+#add-benefits{
+    color:#DADBE5;
+    font-size: 2em;
+    float: right;
+    cursor: pointer;
+}
+
+#save-results-responsive{
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-left: -15px;
+    display: none;
+    cursor: pointer;
+}
+
+#save-results-not-responsive{
+    cursor: pointer;
+}
+
+.title-modal-results{
+    margin-left: 40%; 
+    font-weight: bold;
+}

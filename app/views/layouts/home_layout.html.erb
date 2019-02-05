@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Yeah Them</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag 'logocon.ico' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- for responsive design with bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- for the fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+  </head>
+
+  <body style="<%= @home_page ? 'background-color: rgb(213,226,227);' : 'background-color: #fafafa;'%>">
+    <!--For devise flash alerts-->
+    <!--<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>-->
+    <%= yield %>
+  </body>
+</html>

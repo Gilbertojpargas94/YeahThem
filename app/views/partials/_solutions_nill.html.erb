@@ -1,0 +1,27 @@
+<div class="card shadow-style" id="card">
+  <div class="row">
+    <div class="col-10"><h3 class="title-card">Solución</h3></div>
+    <div class="col-2" style="font-weight: bold; color: #B2BBC1;"><%= contador %></div>
+  </div>
+  <section class="card_title row">
+    <%= image_tag company.logo.url(:thumb), class: "card-image-title col-3" %>  
+    <div class="cad-sub-title col-9">
+      <h5><%= company.name %></h5>
+      <h6><%= company.industries.first.name %> - </h6>
+    </div>
+  </section>
+  <%= image_tag "camera.png", class: "img-card" %>
+    <div class="card-body" id="card-body">
+      <p class="card-text">Descripción</p>
+    </div>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 10px;">
+        <div id="validation-card-solution">
+          <i class="material-icons ii  md-18">beenhere</i>
+        </div>
+        <div id="validation-card-solution-num">
+          <p class="validado-p">0 Validaciones</p>
+        </div>
+      </div>
+    </div>
+</div>

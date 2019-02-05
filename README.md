@@ -1,2 +1,26 @@
-# YeahThem
-Development of a web app to publication of projects and the subsequent approval by the clients to whom the app was developed, using the Ruby on Rails framework
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+* Ya tengo permisos para editar
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

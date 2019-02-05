@@ -1,0 +1,130 @@
+<div class="modal fade" id="benefit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title title-modal-results" style="margin-left: 40%; font-weight: bold;">Añade Resultados</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-8"></div>
+                  <div id="save-results-responsive" class="col-4 bg-primary text-center text-white">
+                    Guardar
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid scoll-results" id="container-all-results">
+                <%= form_tag benefits_path do %>
+                  <% @results.each do |benefit| %>
+                    <%= fields_for 'benefits[]', benefit do |p| %>
+                        <div class="row">
+                            <div class="col-2 col-lg-1">
+                              <i class="fa fa-chevron-circle-right fa-2x" style="color:#DADBE5" aria-hidden="true"></i>
+                              <div class="verticaline">
+                              </div>
+                            </div> 
+                            <div class="col-10  col-lg-11" >
+                              <%= p.hidden_field :solution_id, :value => params[:solution_id] %>
+                              <%= p.label :description %>
+                              <%= p.text_area :description, id: "texts-areas", class: "benefits-area",maxlength:72, require: true %>
+                              <p style="color: #706f6f;">Máximo 72 caracteres</p>
+                          </div>
+                      </div>
+                    <% end %>
+                  <%end%>
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-7"></div>
+                    <div class="col-md-2">
+                      <i id="add-benefits" class="fa fa-plus-circle" aria-hidden="true"></i>
+                    </div>
+                      <%= submit_tag 'Guardar', class:'col-md-3 bg-primary text-center text-white', id:'save-results-not-responsive', style: 'padding: 5px'%>
+                  </div>
+                </div>
+              <%end%>
+            </div>
+            <div class="col-md-4">
+              <p style="color: #706f6f;">
+                Explica por qué tu solución fue útil para cada uno de los clientes que has ayudado.
+              </p>
+              <p style="color: #706f6f;">Algunos aspectos en los que te puedes centrar 
+                  <span class="text-primary" style="cursor: pointer;" onclick="bye()">
+                    <span id="see-moree">Ver más</span>
+                    <i id="down1" class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i id="up1" style="display: none;" class="fa fa-chevron-up" aria-hidden="true"></i>
+                  </span>
+                </p>
+               <div id="content-results" class="scroll-benefits">    
+                  <span style="cursor: pointer;" onclick="byebye2()">
+                    <p>Ahoro de tiempo 
+                      <i id="down2" class="fa fa-chevron-down" aria-hidden="true"></i>
+                      <i id="up2" style="display: none;" class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </p>
+                  </span>
+                  <div id="content-results2" style="display: none;">
+                    <p style="color: #706f6f;">
+                      -¿En qué aspectos has ahorrado tiempo?<br>
+                      -¿Cuánto era el tiempo antes y cuanto ahora?<br>
+                      -¿Hace más trabajo con menos recursos?<br>
+                    </p>
+                  </div>
+                  <span style="cursor: pointer;" onclick="byebye3()">
+                    <p>Productividad 
+                      <i id="down3" class="fa fa-chevron-down" aria-hidden="true"></i>
+                      <i id="up3" style="display: none;" class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </p>
+                  </span>
+                  <div id="content-results3" style="display: none">
+                    <p style="color: #706f6f;">
+                      -¿Hay reducciones o aumentos en métricas importantes?<br>
+                      -¿Encuentran o hacen algo más rápido ahora que antes?<br>
+                    </p>
+                  </div>
+                  <span style="cursor: pointer;" onclick="byebye4()">
+                    <p>Seguridad
+                      <i id="down4" class="fa fa-chevron-down" aria-hidden="true"></i>
+                      <i id="up4" style="display: none;" class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </p>
+                  </span>
+                  <div id="content-results4" style="display: none">
+                    <p style="color: #706f6f;">
+                      -¿Se producen menos eventos relacionados con la seguridad?<br>
+                    </p>
+                  </div>
+                  <span style="cursor: pointer;" onclick="byebye5()">
+                    <p>Impacto Financiero 
+                        <i id="down5" class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <i id="up5" style="display: none;" class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </p>
+                  </span>
+                  <div id="content-results5" style="display: none">
+                    <p style="color:  #706f6f;">
+                      -¿Que costes se eliminaron?<br>
+                    </p>
+                  </div>
+                  <span style="cursor: pointer;" onclick="byebye6()">
+                    <p>Compliance 
+                      <i id="down6" class="fa fa-chevron-down" aria-hidden="true"></i>
+                      <i id="up6" style="display: none;" class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </p>
+                  </span>
+                  <div id="content-results6" style="display: none">
+                    <p style="color: #706f6f;">
+                      -¿Se cumple mejor con los requisitos regulatorios?<br>
+                    </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

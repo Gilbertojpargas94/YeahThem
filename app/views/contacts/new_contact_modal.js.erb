@@ -1,0 +1,20 @@
+$('<%= j render "contacter"%>').on('shown.bs.modal', function (e) {
+    $('#boton').click(function() {
+    	var elem = document.getElementById("name");
+    	var re = /^[0-9-+ ()]*$/;
+    	if(re.test(elem.value)){
+	    	if ($('#inputName').val().length   >   0   &&
+		        $('#inputEmail').val().length  >   0   &&
+		        $('#inputTel').val().length    >   0 &&
+	    		$('#inputMessage').val().length > 0){
+			$('#contact-modal').modal("hide");}
+		}else{
+			$('#inputTel').style.borderColor="red";
+		}
+	});
+
+}).modal(); 
+
+
+
+
